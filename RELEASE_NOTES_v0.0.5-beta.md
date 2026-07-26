@@ -22,7 +22,7 @@ This is the first public Windows beta of Graphic Runner.
 
 This software is a public beta. Save backup copies of important artwork and verify exported files before relying on them in production.
 
-The installers are not yet digitally signed, so Windows may display an unknown-publisher or SmartScreen warning. Download only from the official `Linedrawguy/graphic-runner` repository and verify the published SHA-256 checksum.
+The installers are not yet digitally signed, so Windows may display an unknown-publisher or SmartScreen warning. Download only from the official `trunninthisshit/graphic-runner` repository and verify the published SHA-256 checksum.
 
 ## SHA-256
 

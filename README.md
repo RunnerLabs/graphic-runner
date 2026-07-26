@@ -4,7 +4,7 @@ Graphic Runner is an offline desktop graphics studio for creating high-impact te
 
 ## Download
 
-Download the latest self-contained build from the [latest GitHub release](https://github.com/Linedrawguy/graphic-runner/releases/latest).
+Download the latest self-contained build from the [latest GitHub release](https://github.com/trunninthisshit/graphic-runner/releases/latest).
 
 - `GraphicRunner-Next-win-x64.zip` is the Windows 10/11 x64 build.
 - `GraphicRunner-Next-linux-x64.tar.gz` is the native Linux x64 build.
@@ -45,8 +45,8 @@ This public repository contains the Graphic Runner website and compiled release 
 For public beta v0.3.0:
 
 ```text
-0CD50817254FE997DE7FC589939375646852E1A9A1221DE51B67FCFC53AA14EA  GraphicRunner-Next-win-x64.zip
-E11D041BFAF18EE9899815D596AA6A12E7AB2DF829FCECD9A13604FEF85C6C1A  GraphicRunner-Next-linux-x64.tar.gz
+7C1005CA3C53B75ED34FB30D95F47837E467CF70F007716C5790524D4EBCC556  GraphicRunner-Next-win-x64.zip
+EE0D03B07D24CCE24138F87B85C0A3ADD62DFE6A4AE38A6EB4D0F507AF21DBC3  GraphicRunner-Next-linux-x64.tar.gz
 ```
 
 On Windows, verify a download with:
