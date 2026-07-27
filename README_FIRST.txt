@@ -47,7 +47,7 @@ bundle, publish, rebrand, relabel, or present Graphic Runner as your
 own product or work. Do not charge anyone for the Software itself.
 Instead, share this official download page:
 
-https://github.com/trunninthisshit/graphic-runner/releases/latest
+https://github.com/RunnerLabs/graphic-runner/releases/latest
 
 Violating these restrictions is outside the license and may terminate
 your right to use Graphic Runner. Graphic Runner is a neutral creative

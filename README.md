@@ -4,7 +4,7 @@ Graphic Runner is an offline desktop graphics studio for creating high-impact te
 
 ## Download
 
-Download the latest self-contained build from the [latest GitHub release](https://github.com/trunninthisshit/graphic-runner/releases/latest).
+Download the latest self-contained build from the [latest GitHub release](https://github.com/RunnerLabs/graphic-runner/releases/latest).
 
 - `GraphicRunner-Next-win-x64.zip` is the Windows 10/11 x64 build.
 - `GraphicRunner-Next-linux-x64.tar.gz` is the native Linux x64 build.

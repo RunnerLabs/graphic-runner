@@ -38,7 +38,7 @@ web application but missing from the first Java desktop beta.
 
 The installers are not yet digitally signed, so Windows may display an
 unknown-publisher or SmartScreen warning. Download only from the official
-`trunninthisshit/graphic-runner` repository and verify the SHA-256 checksum.
+`RunnerLabs/graphic-runner` repository and verify the SHA-256 checksum.
 
 After verifying the checksum, select **More info**, confirm the app name, and
 select **Run anyway**. Do not disable Microsoft Defender or SmartScreen.

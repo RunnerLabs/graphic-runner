@@ -31,7 +31,7 @@ effect IDs for compatibility.
 - `GraphicRunnerInstallBeta.msi` — managed or advanced installation
 
 The installers are not yet digitally signed. Download only from the official
-`trunninthisshit/graphic-runner` repository, verify the checksum, then use **More
+`RunnerLabs/graphic-runner` repository, verify the checksum, then use **More
 info → Run anyway** if Microsoft Defender SmartScreen appears.
 
 ## Linux through Bottles and Wine
