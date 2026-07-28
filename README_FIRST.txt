@@ -61,12 +61,15 @@ BETA AND SECURITY NOTICE
 Graphic Runner is pre-release software provided as-is. It may contain
 bugs or behave unexpectedly. Do not rely on it for critical work.
 
-The Windows build is not digitally signed yet, so Microsoft Defender
+The Windows installer is not digitally signed yet, so Microsoft Defender
 SmartScreen may report an unknown publisher. Download only from the
 official release page above.
 
-Verify the archive against SHA256SUMS.txt before running it. Do not
+Verify the installer against SHA256SUMS.txt before running it. Do not
 disable Microsoft Defender or SmartScreen.
+
+Linux users may run the Windows installer through Wine and Bottles. This
+is a tested compatibility route, not a native Linux build.
 
 CONTACT AND FEEDBACK
 --------------------
