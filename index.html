@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ff4b12">
-  <meta name="description" content="Graphic Runner is a free offline graphics studio for high-impact text, image, logo-vector, symbol, and print effects on Windows and Linux through Wine and Bottles.">
+  <meta name="description" content="Graphic Runner is a free offline graphics studio for high-impact text, image, logo-vector, symbol, and print effects on Windows and native Linux.">
   <link rel="canonical" href="https://runnerlabs.github.io/graphic-runner/">
 
   <meta property="og:type" content="website">
@@ -197,7 +197,7 @@
     <section class="command-card" id="top" aria-labelledby="main-title">
       <div class="terminal-line">
         <span>$ graphic-runner --start</span>
-        <span class="status">v0.0.14 Java beta</span>
+        <span class="status">v0.0.17 Java beta</span>
       </div>
 
       <div class="ascii-wrap">
@@ -217,7 +217,7 @@
         </div>
         <div class="actions" aria-label="Download and feedback actions">
           <a class="button primary" href="https://github.com/RunnerLabs/graphic-runner/releases/latest/download/GraphicRunnerInstallBeta.exe">Windows installer</a>
-          <a class="button secondary" href="#linux-install">Linux via Bottles</a>
+          <a class="button secondary" href="https://github.com/RunnerLabs/graphic-runner/releases/latest/download/graphicrunner_0.0.17-1_amd64.deb">Linux native</a>
           <a class="button secondary" href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Send feedback</a>
         </div>
       </div>
@@ -237,7 +237,7 @@
         <div class="detail-body">
           <ol>
             <li>Download <code>GraphicRunnerInstallBeta.exe</code>.</li>
-            <li>Verify its SHA-256 checksum:<span class="checksum">E6E7F482BAFC9FA1BFD0DCA251F0F2498D17BF8713C770E2535BDE951E8CF458</span></li>
+            <li>Verify its SHA-256 checksum:<span class="checksum">79DEF8B878C8DF3B6FDA8C77773C4DFA4311B3818A88A81B3EF6245A4349F7C1</span></li>
             <li>Run the installer. Java is already included.</li>
             <li>This unsigned beta may display <strong>Windows protected your PC</strong>. After verifying the checksum, select <strong>More info</strong>, confirm the app name, then select <strong>Run anyway</strong>.</li>
             <li>Accept the beta license when Graphic Runner opens.</li>
@@ -247,15 +247,15 @@
       </details>
 
       <details id="linux-install">
-        <summary><h2>Linux</h2><span>Tested with Wine + Bottles</span></summary>
+        <summary><h2>Linux x64</h2><span>Native runtime included</span></summary>
         <div class="detail-body">
           <ol>
-            <li>Install <a href="https://usebottles.com/" target="_blank" rel="noopener">Bottles</a> and create an <strong>Application</strong> bottle.</li>
-            <li>Download <code>GraphicRunnerInstallBeta.exe</code> and verify its checksum:<span class="checksum">E6E7F482BAFC9FA1BFD0DCA251F0F2498D17BF8713C770E2535BDE951E8CF458</span></li>
-            <li>Open the bottle, choose <strong>Run Executable</strong>, and select the Graphic Runner installer.</li>
-            <li>Complete installation and launch Graphic Runner from the same bottle.</li>
+            <li>Download <code>graphicrunner_0.0.17-1_amd64.deb</code> and verify its checksum:<span class="checksum">1AECBF89E2EA73702A7178245CD41874539CEF062A47C10483665E16F1413AAB</span></li>
+            <li>Install it with <code>sudo apt install ./graphicrunner_0.0.17-1_amd64.deb</code>.</li>
+            <li>Launch <strong>GraphicRunner</strong> from your desktop application menu.</li>
+            <li>For a no-install option, download the portable <code>GraphicRunner-Linux-x64-0.0.17.tar.gz</code> bundle.</li>
           </ol>
-          <p class="detail-note">This is the tested Wine/Bottles compatibility route, not a native Linux binary. Plain Wine users can run <code>wine GraphicRunnerInstallBeta.exe</code>.</p>
+          <p class="detail-note">Built and tested natively on an Ubuntu 22.04 baseline. Java is included. Wine and Bottles are no longer required.</p>
         </div>
       </details>
     </section>

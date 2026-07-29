@@ -8,9 +8,11 @@ Download the latest build from the [official GitHub release](https://github.com/
 
 - `GraphicRunnerInstallBeta.exe` — recommended Windows 10/11 installer.
 - `GraphicRunnerInstallBeta.msi` — alternate Windows MSI installer.
-- `SHA256SUMS.txt` — checksums for verifying both installers.
+- `graphicrunner_0.0.17-1_amd64.deb` — native Ubuntu/Debian x64 package.
+- `GraphicRunner-Linux-x64-0.0.17.tar.gz` — portable native Linux x64 bundle.
+- `SHA256SUMS.txt` — checksums for verifying every download.
 
-The installer includes Graphic Runner's Java runtime. Users do not need to install Java separately.
+Every package includes Graphic Runner's Java runtime. Users do not need to install Java separately.
 
 ## Windows installation
 
@@ -21,34 +23,40 @@ The installer includes Graphic Runner's Java runtime. Users do not need to insta
 
 Do not disable Microsoft Defender or SmartScreen. Trusted code signing is the permanent fix for the unsigned-publisher warning.
 
-## Linux installation — Wine + Bottles
+## Native Linux installation
 
-Graphic Runner v0.0.14 is a Windows desktop build. It has been tested on Linux through Wine and Bottles; this release does not include a native Linux binary.
+Graphic Runner v0.0.17 includes native x64 Linux builds produced and tested on an Ubuntu 22.04 baseline. Wine and Bottles are no longer required.
 
-### Bottles
+### Ubuntu/Debian package
 
-1. Install [Bottles](https://usebottles.com/) and create an **Application** bottle.
-2. Download `GraphicRunnerInstallBeta.exe` from the latest Graphic Runner release.
-3. In Bottles, open the bottle, choose **Run Executable**, and select the installer.
-4. Complete the installer and launch Graphic Runner from that bottle.
-
-### Plain Wine
-
-With Wine installed, run:
+Download `graphicrunner_0.0.17-1_amd64.deb`, verify its checksum, then run:
 
 ```bash
-wine GraphicRunnerInstallBeta.exe
+sudo apt install ./graphicrunner_0.0.17-1_amd64.deb
 ```
 
-Linux compatibility depends on the installed Wine/Bottles version, graphics drivers, and desktop environment. If one runner has a display issue, try the current Bottles Application environment.
+Launch **GraphicRunner** from the desktop application menu.
+
+### Portable Linux bundle
+
+Download `GraphicRunner-Linux-x64-0.0.17.tar.gz`, verify it, then run:
+
+```bash
+tar -xzf GraphicRunner-Linux-x64-0.0.17.tar.gz
+./GraphicRunner/bin/GraphicRunner
+```
+
+The portable bundle includes its own runtime but still needs a graphical Linux desktop and standard X11/font libraries. The older Wine/Bottles route remains an optional fallback for unsupported distributions.
 
 ## Verify your download
 
-For Graphic Runner v0.0.14 Java Beta:
+For Graphic Runner v0.0.17 Java Beta:
 
 ```text
-E6E7F482BAFC9FA1BFD0DCA251F0F2498D17BF8713C770E2535BDE951E8CF458  GraphicRunnerInstallBeta.exe
-C33632E1C28879E04AF3D2B128655B5A22F168D1EA2463A0A637DB42CFEB2BF2  GraphicRunnerInstallBeta.msi
+79DEF8B878C8DF3B6FDA8C77773C4DFA4311B3818A88A81B3EF6245A4349F7C1  GraphicRunnerInstallBeta.exe
+4F686E2E7FB04B5FEBB3634EF3B72F77CAD7D8A1A9B6E05F7B0D8EFDBD219CC0  GraphicRunnerInstallBeta.msi
+1AECBF89E2EA73702A7178245CD41874539CEF062A47C10483665E16F1413AAB  graphicrunner_0.0.17-1_amd64.deb
+67911A8E0D05C69FD60AC1918184D4CCFABBC90C1C1FEC4BF3CBE32F94FC6621  GraphicRunner-Linux-x64-0.0.17.tar.gz
 ```
 
 On Windows:
@@ -60,7 +68,7 @@ Get-FileHash .\GraphicRunnerInstallBeta.exe -Algorithm SHA256
 On Linux:
 
 ```bash
-sha256sum GraphicRunnerInstallBeta.exe
+sha256sum graphicrunner_0.0.17-1_amd64.deb
 ```
 
 ## Privacy and source protection

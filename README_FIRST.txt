@@ -68,8 +68,9 @@ official release page above.
 Verify the installer against SHA256SUMS.txt before running it. Do not
 disable Microsoft Defender or SmartScreen.
 
-Linux users may run the Windows installer through Wine and Bottles. This
-is a tested compatibility route, not a native Linux build.
+Linux users can install the native x64 .deb or run the portable x64
+bundle from the official release page. Both include their own Java
+runtime. Wine and Bottles are optional fallbacks, not requirements.
 
 CONTACT AND FEEDBACK
 --------------------
