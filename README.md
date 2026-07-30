@@ -4,7 +4,7 @@ Graphic Runner is a free offline desktop graphics studio for creating high-impac
 
 ## Download
 
-Download the latest build from the [official GitHub release](https://github.com/RunnerLabs/graphic-runner/releases/latest).
+Download this build from the [official v0.0.18 GitHub release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.18).
 
 - `GraphicRunnerInstallBeta.exe` — recommended Windows 10/11 installer.
 - `GraphicRunnerInstallBeta.msi` — alternate Windows MSI installer.
