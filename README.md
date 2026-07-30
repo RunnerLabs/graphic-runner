@@ -8,8 +8,8 @@ Download the latest build from the [official GitHub release](https://github.com/
 
 - `GraphicRunnerInstallBeta.exe` — recommended Windows 10/11 installer.
 - `GraphicRunnerInstallBeta.msi` — alternate Windows MSI installer.
-- `graphicrunner_0.0.17-1_amd64.deb` — native Ubuntu/Debian x64 package.
-- `GraphicRunner-Linux-x64-0.0.17.tar.gz` — portable native Linux x64 bundle.
+- `graphicrunner_0.0.18-1_amd64.deb` — native Ubuntu/Debian x64 package.
+- `GraphicRunner-Linux-x64-0.0.18.tar.gz` — portable native Linux x64 bundle.
 - `SHA256SUMS.txt` — checksums for verifying every download.
 
 Every package includes Graphic Runner's Java runtime. Users do not need to install Java separately.
@@ -25,38 +25,38 @@ Do not disable Microsoft Defender or SmartScreen. Trusted code signing is the pe
 
 ## Native Linux installation
 
-Graphic Runner v0.0.17 includes native x64 Linux builds produced and tested on an Ubuntu 22.04 baseline. Wine and Bottles are no longer required.
+Graphic Runner v0.0.18 includes native x64 Linux builds produced on an Ubuntu 22.04 baseline. Wine and Bottles are no longer required.
 
 ### Ubuntu/Debian package
 
-Download `graphicrunner_0.0.17-1_amd64.deb`, verify its checksum, then run:
+Download `graphicrunner_0.0.18-1_amd64.deb`, verify its checksum, then run:
 
 ```bash
-sudo apt install ./graphicrunner_0.0.17-1_amd64.deb
+sudo apt install ./graphicrunner_0.0.18-1_amd64.deb
 ```
 
 Launch **GraphicRunner** from the desktop application menu.
 
 ### Portable Linux bundle
 
-Download `GraphicRunner-Linux-x64-0.0.17.tar.gz`, verify it, then run:
+Download `GraphicRunner-Linux-x64-0.0.18.tar.gz`, verify it, then run:
 
 ```bash
-tar -xzf GraphicRunner-Linux-x64-0.0.17.tar.gz
+tar -xzf GraphicRunner-Linux-x64-0.0.18.tar.gz
 ./GraphicRunner/bin/GraphicRunner
 ```
 
-The portable bundle includes its own runtime but still needs a graphical Linux desktop and standard X11/font libraries. The older Wine/Bottles route remains an optional fallback for unsupported distributions.
+The portable bundle includes its own Java runtime but still needs a graphical Linux desktop, standard X11/font libraries, `libvulkan1`, and a current Vulkan-capable graphics driver for AI upscale. The DEB declares the Vulkan runtime automatically. Classic resize and the rest of the editor remain available if AI inference cannot start.
 
 ## Verify your download
 
-For Graphic Runner v0.0.17 Java Beta:
+For Graphic Runner v0.0.18 Java Beta:
 
 ```text
-79DEF8B878C8DF3B6FDA8C77773C4DFA4311B3818A88A81B3EF6245A4349F7C1  GraphicRunnerInstallBeta.exe
-4F686E2E7FB04B5FEBB3634EF3B72F77CAD7D8A1A9B6E05F7B0D8EFDBD219CC0  GraphicRunnerInstallBeta.msi
-1AECBF89E2EA73702A7178245CD41874539CEF062A47C10483665E16F1413AAB  graphicrunner_0.0.17-1_amd64.deb
-67911A8E0D05C69FD60AC1918184D4CCFABBC90C1C1FEC4BF3CBE32F94FC6621  GraphicRunner-Linux-x64-0.0.17.tar.gz
+F4053FD6B3DF68B664212A2CAC90DFF416510976FF39BF30835918F2567B4C09  GraphicRunnerInstallBeta.exe
+08D3E32842E066A868CC147E5B89B4CE03CC85259DDD2A16AA63FB9619DC65A5  GraphicRunnerInstallBeta.msi
+1F1DF51BE88B4B8291826E1B7F5EAEC9F7A2BED50048A308B79DA8D5CF741563  graphicrunner_0.0.18-1_amd64.deb
+CD5477F5E0BA3C9ADD3865B7C15E94E4EA0183D15226B3244A68FF01501E59BA  GraphicRunner-Linux-x64-0.0.18.tar.gz
 ```
 
 On Windows:
@@ -68,7 +68,7 @@ Get-FileHash .\GraphicRunnerInstallBeta.exe -Algorithm SHA256
 On Linux:
 
 ```bash
-sha256sum graphicrunner_0.0.17-1_amd64.deb
+sha256sum graphicrunner_0.0.18-1_amd64.deb
 ```
 
 ## Privacy and source protection
