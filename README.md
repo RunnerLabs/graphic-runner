@@ -4,17 +4,18 @@ Graphic Runner is a free offline desktop graphics studio for creating high-impac
 
 ## Download
 
-Download the current Windows build from the [official v0.0.19 GitHub release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.19). The native Linux build remains available from the [v0.0.18 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.18).
+Download the current Windows and native Linux builds from the [official v0.0.19 GitHub release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.19).
 
 - `GraphicRunnerInstallBeta.exe` — recommended Windows 10/11 v0.0.19 installer.
 - `GraphicRunnerInstallBeta.msi` — alternate Windows v0.0.19 MSI installer.
-- `graphicrunner_0.0.18-1_amd64.deb` — native Ubuntu/Debian x64 package.
-- `GraphicRunner-Linux-x64-0.0.18.tar.gz` — portable native Linux x64 bundle.
-- `SHA256SUMS.txt` — checksums for verifying every download.
+- `graphicrunner_0.0.19_amd64.deb` — native Ubuntu/Debian x64 package.
+- `GraphicRunner-Linux-x64-0.0.19.tar.gz` — portable native Linux x64 bundle.
+- `SHA256SUMS.txt` — Windows checksums.
+- `SHA256SUMS-LINUX.txt` — Linux checksums.
 
 Every package includes Graphic Runner's Java runtime. Users do not need to install Java separately.
 
-## What is new in Windows v0.0.19
+## What is new in v0.0.19
 
 - Standard, High, and Ultra canvas-preview quality.
 - Camera Raw finishing with sharpen, clarity, brightness, tones, color grading,
@@ -37,24 +38,24 @@ Do not disable Microsoft Defender or SmartScreen. Trusted code signing is the pe
 
 ## Native Linux installation
 
-Graphic Runner v0.0.18 includes native x64 Linux builds produced on an Ubuntu 22.04 baseline. Wine and Bottles are no longer required.
+Graphic Runner v0.0.19 includes native x64 Linux builds. Wine and Bottles are not required.
 
 ### Ubuntu/Debian package
 
-Download `graphicrunner_0.0.18-1_amd64.deb`, verify its checksum, then run:
+Download `graphicrunner_0.0.19_amd64.deb`, verify its checksum, then run:
 
 ```bash
-sudo apt install ./graphicrunner_0.0.18-1_amd64.deb
+sudo apt install ./graphicrunner_0.0.19_amd64.deb
 ```
 
 Launch **GraphicRunner** from the desktop application menu.
 
 ### Portable Linux bundle
 
-Download `GraphicRunner-Linux-x64-0.0.18.tar.gz`, verify it, then run:
+Download `GraphicRunner-Linux-x64-0.0.19.tar.gz`, verify it, then run:
 
 ```bash
-tar -xzf GraphicRunner-Linux-x64-0.0.18.tar.gz
+tar -xzf GraphicRunner-Linux-x64-0.0.19.tar.gz
 ./GraphicRunner/bin/GraphicRunner
 ```
 
@@ -69,11 +70,11 @@ For Graphic Runner Windows v0.0.19 Java Beta:
 D6E48DDAABF9C3787FE2525E443DBA8D8E76A63DA46545D7434C09C29360AA4C  GraphicRunnerInstallBeta.msi
 ```
 
-For the native Linux v0.0.18 build:
+For the native Linux v0.0.19 build:
 
 ```text
-1F1DF51BE88B4B8291826E1B7F5EAEC9F7A2BED50048A308B79DA8D5CF741563  graphicrunner_0.0.18-1_amd64.deb
-CD5477F5E0BA3C9ADD3865B7C15E94E4EA0183D15226B3244A68FF01501E59BA  GraphicRunner-Linux-x64-0.0.18.tar.gz
+86F2F540DAE922B000DF635F9F9E6B70D7F04D3C45D205548E51683A8FB7EC80  graphicrunner_0.0.19_amd64.deb
+4946E8795377CA9FA31CAD051CDB82BFDC82D03705E92B3C7DA55256B468FF8B  GraphicRunner-Linux-x64-0.0.19.tar.gz
 ```
 
 On Windows:
@@ -85,7 +86,7 @@ Get-FileHash .\GraphicRunnerInstallBeta.exe -Algorithm SHA256
 On Linux:
 
 ```bash
-sha256sum graphicrunner_0.0.18-1_amd64.deb
+sha256sum graphicrunner_0.0.19_amd64.deb
 ```
 
 ## Privacy and source protection
