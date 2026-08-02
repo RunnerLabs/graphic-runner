@@ -4,15 +4,27 @@ Graphic Runner is a free offline desktop graphics studio for creating high-impac
 
 ## Download
 
-Download this build from the [official v0.0.18 GitHub release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.18).
+Download the current Windows build from the [official v0.0.19 GitHub release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.19). The native Linux build remains available from the [v0.0.18 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.18).
 
-- `GraphicRunnerInstallBeta.exe` — recommended Windows 10/11 installer.
-- `GraphicRunnerInstallBeta.msi` — alternate Windows MSI installer.
+- `GraphicRunnerInstallBeta.exe` — recommended Windows 10/11 v0.0.19 installer.
+- `GraphicRunnerInstallBeta.msi` — alternate Windows v0.0.19 MSI installer.
 - `graphicrunner_0.0.18-1_amd64.deb` — native Ubuntu/Debian x64 package.
 - `GraphicRunner-Linux-x64-0.0.18.tar.gz` — portable native Linux x64 bundle.
 - `SHA256SUMS.txt` — checksums for verifying every download.
 
 Every package includes Graphic Runner's Java runtime. Users do not need to install Java separately.
+
+## What is new in Windows v0.0.19
+
+- Standard, High, and Ultra canvas-preview quality.
+- Camera Raw finishing with sharpen, clarity, brightness, tones, color grading,
+  luminance denoise, and color denoise.
+- Alignment, 90-degree rotation, horizontal/vertical flipping, optional
+  artboards, and a dedicated Layout panel.
+- Borderless alpha canvas, universal black-and-white filter, drag-and-drop image
+  import, and clipboard paste.
+- Smoother paint strokes with stable opacity, `B` brush shortcut, improved
+  loading lock, and clearer bottom-inserted blank layers.
 
 ## Windows installation
 
@@ -50,11 +62,16 @@ The portable bundle includes its own Java runtime but still needs a graphical Li
 
 ## Verify your download
 
-For Graphic Runner v0.0.18 Java Beta:
+For Graphic Runner Windows v0.0.19 Java Beta:
 
 ```text
-F4053FD6B3DF68B664212A2CAC90DFF416510976FF39BF30835918F2567B4C09  GraphicRunnerInstallBeta.exe
-08D3E32842E066A868CC147E5B89B4CE03CC85259DDD2A16AA63FB9619DC65A5  GraphicRunnerInstallBeta.msi
+2E962CD69B94C71E910D6D4736E3E53BD3E8A7DDD942C82CAE2CDC45A82797B0  GraphicRunnerInstallBeta.exe
+D6E48DDAABF9C3787FE2525E443DBA8D8E76A63DA46545D7434C09C29360AA4C  GraphicRunnerInstallBeta.msi
+```
+
+For the native Linux v0.0.18 build:
+
+```text
 1F1DF51BE88B4B8291826E1B7F5EAEC9F7A2BED50048A308B79DA8D5CF741563  graphicrunner_0.0.18-1_amd64.deb
 CD5477F5E0BA3C9ADD3865B7C15E94E4EA0183D15226B3244A68FF01501E59BA  GraphicRunner-Linux-x64-0.0.18.tar.gz
 ```
