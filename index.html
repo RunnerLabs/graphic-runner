@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ff4b12">
-  <meta name="description" content="Graphic Runner is a free offline graphics studio with 28 effects, layers, masks, Type Lab, vector tools, Camera Raw finishing, and local AI upscaling for Windows and Linux.">
+  <meta name="description" content="Graphic Runner is a free offline graphics studio with Print True 4000 px preview, 28 effects, layers, masks, Type Lab, vector tools, Camera Raw, and local AI upscaling for Windows and Linux.">
   <link rel="canonical" href="https://runnerlabs.github.io/graphic-runner/">
 
   <meta property="og:type" content="website">
@@ -188,7 +188,7 @@
       <div class="nav-links">
         <a href="#install">Install notes</a>
         <a href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Feedback</a>
-        <a class="download-link" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.19/GraphicRunnerInstallBeta.exe">Download</a>
+        <a class="download-link" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.19.1/GraphicRunner-0.0.19.1-Windows-Portable.zip">Download</a>
       </div>
     </nav>
   </header>
@@ -197,7 +197,7 @@
     <section class="command-card" id="top" aria-labelledby="main-title">
       <div class="terminal-line">
         <span>$ graphic-runner --start</span>
-        <span class="status">WINDOWS v0.0.19 / LINUX v0.0.19</span>
+        <span class="status">WINDOWS v0.0.19.1 / LINUX v0.0.19.1</span>
       </div>
 
       <div class="ascii-wrap">
@@ -216,8 +216,8 @@
           <p>Designed for anyone who wants to explore their creative side without a pay wall and without an internet connection.</p>
         </div>
         <div class="actions" aria-label="Download and feedback actions">
-          <a class="button primary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.19/GraphicRunnerInstallBeta.exe">Windows v0.0.19</a>
-          <a class="button secondary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.19/graphicrunner_0.0.19_amd64.deb">Linux v0.0.19</a>
+          <a class="button primary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.19.1/GraphicRunner-0.0.19.1-Windows-Portable.zip">Windows v0.0.19.1</a>
+          <a class="button secondary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.19.1/graphicrunner_0.0.19.1_amd64.deb">Linux v0.0.19.1</a>
           <a class="button secondary" href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Send feedback</a>
         </div>
       </div>
@@ -228,17 +228,17 @@
       <div class="feature"><strong>Layers + masks</strong><span>Blend, select, paint, mask, align, flip, rotate, and use artboards</span></div>
       <div class="feature"><strong>Type Lab + vector</strong><span>Trace lettering, edit nodes, build fonts, and combine paths</span></div>
       <div class="feature"><strong>Offline AI upscale</strong><span>Photo and art models at 2x, 3x, or 4x — artwork stays local</span></div>
-      <div class="feature"><strong>Preview + finish</strong><span>High-quality canvas preview, Camera Raw, denoise, and color grading</span></div>
+      <div class="feature"><strong>Print True preview</strong><span>4000 px Ultra rendering, anti-aliased transforms, Camera Raw, and denoise</span></div>
     </section>
 
     <section class="utility" id="install" aria-label="Installation notes">
       <details>
-        <summary><h2>Windows 10/11</h2><span>v0.0.19 runtime included</span></summary>
+        <summary><h2>Windows 10/11</h2><span>v0.0.19.1 portable runtime</span></summary>
         <div class="detail-body">
           <ol>
-            <li>Download <code>GraphicRunnerInstallBeta.exe</code>.</li>
-            <li>Verify its SHA-256 checksum:<span class="checksum">2E962CD69B94C71E910D6D4736E3E53BD3E8A7DDD942C82CAE2CDC45A82797B0</span></li>
-            <li>Run the installer. Java is already included.</li>
+            <li>Download <code>GraphicRunner-0.0.19.1-Windows-Portable.zip</code>.</li>
+            <li>Verify its SHA-256 checksum:<span class="checksum">15709E64C4002FAA359F9ED88219EA1C13EDEF198F73CD6AF36A0444FB38F15D</span></li>
+            <li>Extract the ZIP, open its <code>GraphicRunner</code> folder, and run <code>GraphicRunner.exe</code>. Java is already included.</li>
             <li>This unsigned beta may display <strong>Windows protected your PC</strong>. After verifying the checksum, select <strong>More info</strong>, confirm the app name, then select <strong>Run anyway</strong>.</li>
             <li>Accept the beta license when Graphic Runner opens.</li>
           </ol>
@@ -247,13 +247,13 @@
       </details>
 
       <details id="linux-install">
-        <summary><h2>Linux x64</h2><span>v0.0.19 native runtime</span></summary>
+        <summary><h2>Linux x64</h2><span>v0.0.19.1 native runtime</span></summary>
         <div class="detail-body">
           <ol>
-            <li>Download <code>graphicrunner_0.0.19_amd64.deb</code> and verify its checksum:<span class="checksum">86F2F540DAE922B000DF635F9F9E6B70D7F04D3C45D205548E51683A8FB7EC80</span></li>
-            <li>Install it with <code>sudo apt install ./graphicrunner_0.0.19_amd64.deb</code>.</li>
+            <li>Download <code>graphicrunner_0.0.19.1_amd64.deb</code> and verify its checksum:<span class="checksum">33C7289C9324C369E3A27F4C8675FE87D424084871E6A4FE1B76E576CF4E1FE8</span></li>
+            <li>Install it with <code>sudo apt install ./graphicrunner_0.0.19.1_amd64.deb</code>.</li>
             <li>Launch <strong>GraphicRunner</strong> from your desktop application menu.</li>
-            <li>For a no-install option, download the portable <code>GraphicRunner-Linux-x64-0.0.19.tar.gz</code> bundle.</li>
+            <li>For a no-install option, download the portable <code>GraphicRunner-Linux-x64-0.0.19.1.tar.gz</code> bundle.</li>
           </ol>
           <p class="detail-note">Java is included, and the DEB installs the standard Vulkan runtime used by AI upscale. Portable users need <code>libvulkan1</code> plus a current Vulkan-capable graphics driver. Wine and Bottles are not required.</p>
         </div>
@@ -265,7 +265,7 @@
     <div class="footer-row shell">
       <span>© 2026 Patrick Jamison / Graphic Runner proprietary freeware / source private</span>
       <div class="footer-links">
-        <a href="https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.19">Release files</a>
+        <a href="https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.19.1">Release files</a>
         <a href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Beta feedback</a>
         <a href="mailto:taskmaster@trunner.net">Contact</a>
       </div>
