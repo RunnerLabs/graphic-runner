@@ -199,7 +199,7 @@
       <div class="nav-links">
         <a href="#install">Install notes</a>
         <a href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Feedback</a>
-        <a class="download-link" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.20/GraphicRunner-0.0.20-Windows-Portable.zip">Download</a>
+        <a class="download-link" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.20/GraphicRunner-0.0.20-Windows-Setup.exe">Download</a>
       </div>
     </nav>
   </header>
@@ -227,7 +227,7 @@
           <p>Designed for anyone who wants to explore their creative side without a pay wall and without an internet connection.</p>
         </div>
         <div class="actions" aria-label="Download and feedback actions">
-          <a class="button primary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.20/GraphicRunner-0.0.20-Windows-Portable.zip">Windows v0.0.20</a>
+          <a class="button primary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.20/GraphicRunner-0.0.20-Windows-Setup.exe">Windows Setup v0.0.20</a>
           <a class="button secondary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.20/graphicrunner_0.0.20_amd64.deb">Linux v0.0.20</a>
           <a class="button secondary" href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Send feedback</a>
         </div>
@@ -257,16 +257,16 @@
 
     <section class="utility" id="install" aria-label="Installation notes">
       <details>
-        <summary><h2>Windows 10/11</h2><span>v0.0.20 portable runtime</span></summary>
+        <summary><h2>Windows 10/11</h2><span>v0.0.20 installer</span></summary>
         <div class="detail-body">
           <ol>
-            <li>Download <code>GraphicRunner-0.0.20-Windows-Portable.zip</code>.</li>
-            <li>Verify its SHA-256 checksum:<span class="checksum">1B57EBBA4140929950A7C96614C9106647740818CE5F6A9E7314A6324397927C</span></li>
-            <li>Extract the ZIP, open its <code>GraphicRunner</code> folder, and run <code>GraphicRunner.exe</code>. Java is already included.</li>
+            <li>Download and run <code>GraphicRunner-0.0.20-Windows-Setup.exe</code>.</li>
+            <li>Verify its SHA-256 checksum:<span class="checksum">7253F165CA27B7E33690A37242D0A7D13EE5886AF8A5B63BF64AA15A964BEEB0</span></li>
+            <li>The installer includes Java, adds Graphic Runner to the Start menu, and registers a normal Windows uninstaller.</li>
             <li>This unsigned beta may display <strong>Windows protected your PC</strong>. After verifying the checksum, select <strong>More info</strong>, confirm the app name, then select <strong>Run anyway</strong>.</li>
             <li>Accept the beta license when Graphic Runner opens.</li>
           </ol>
-          <p class="detail-note">Do not disable Defender or SmartScreen. Trusted code signing is the permanent fix for the warning.</p>
+          <p class="detail-note">Do not disable Defender or SmartScreen. Trusted code signing is the permanent fix for the warning. The release page also provides an MSI for managed installation and a portable ZIP for users who do not want to install.</p>
         </div>
       </details>
 
