@@ -36,6 +36,16 @@ The v0.0.19 feature set also includes:
 - Smoother paint strokes with stable opacity, `B` brush shortcut, improved
   loading lock, and clearer bottom-inserted blank layers.
 
+## Upcoming v0.0.20 preview
+
+![Graphic Runner v0.0.20 feature updates](assets/GraphicRunner-v0.0.20-Updates.png)
+
+Version 0.0.20 is still being tested and is not the current public download.
+Its planned update includes AI-enhanced object selection and inpainting,
+expanded selections and masking, improved layers and clipping, Speed Form
+sketching, trace rulers, gradients and strokes, independent artboards, direct
+image transforms, faster previews, diagnostics, and expanded export tools.
+
 ## Windows installation
 
 1. Download `GraphicRunner-0.0.19.1-Windows-Portable.zip`.
@@ -96,6 +106,24 @@ sha256sum graphicrunner_0.0.19.1_amd64.deb
 ## Privacy and source protection
 
 Graphic Runner operates locally and does not upload your artwork. This public repository contains only the website, user-facing documentation, and compiled release downloads. Application source code and private build files are not included.
+
+## AI-enhanced features, privacy, and acceptance
+
+By installing, launching, or using Graphic Runner—including any AI-enhanced
+feature—you acknowledge and agree to the terms included with the application.
+AI-enhanced features perform only their described editing functions: helping
+select objects, reconstructing a selected image area, and enhancing image
+resolution when the user explicitly requests those actions.
+
+Graphic Runner does not use AI-enhanced features to collect personal data,
+upload artwork, monitor activity, build profiles, train on user content, or
+retain user content for another purpose. Processing stays on the user's device.
+No account, telemetry system, cloud service, or remote AI service is involved.
+Only the local acceptance record and app settings are stored automatically;
+files are otherwise saved when the user chooses to save or export them. Users
+remain responsible for reviewing their results and for the content they create,
+import, publish, or distribute. The license included with Graphic Runner
+contains the complete terms governing use of the application.
 
 ## Acceptable use
 

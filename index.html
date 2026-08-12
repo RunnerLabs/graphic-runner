@@ -125,6 +125,15 @@
     .feature strong { display: block; color: var(--cream); font-family: Arial, Helvetica, sans-serif; font-size: .92rem; font-weight: 900; letter-spacing: -.03em; text-transform: uppercase; }
     .feature span { display: block; margin-top: 5px; color: var(--orange-soft); font-size: .67rem; line-height: 1.35; }
 
+    .update-preview { margin-top: 14px; padding: 18px; border: 1px solid var(--line); background: var(--black-2); }
+    .update-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; padding: 4px 2px 17px; }
+    .update-heading h2 { color: var(--cream); font-size: clamp(1.8rem, 4vw, 3.3rem); line-height: .92; text-transform: uppercase; }
+    .update-heading p { max-width: 590px; margin: 0; color: var(--orange-soft); font-size: .72rem; line-height: 1.55; text-align: right; }
+    .update-preview img { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: var(--black); }
+    .privacy-note { margin-top: 14px; padding: 18px; border: 1px solid var(--line); background: var(--black-2); }
+    .privacy-note h2 { color: var(--cream); font-size: 1.15rem; text-transform: uppercase; }
+    .privacy-note p { margin: 10px 0 0; color: var(--orange-soft); font-size: .72rem; line-height: 1.65; }
+
     .utility { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
     details { border: 1px solid var(--line); background: var(--black-2); }
     summary { min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 16px 18px; color: var(--cream); cursor: pointer; list-style: none; }
@@ -150,6 +159,8 @@
       .hero-bottom { grid-template-columns: 1fr; }
       .actions { display: flex; flex-wrap: wrap; min-width: 0; }
       .actions .button { flex: 1 1 180px; }
+      .update-heading { align-items: flex-start; flex-direction: column; }
+      .update-heading p { text-align: left; }
       .feature-strip { grid-template-columns: repeat(2, 1fr); }
       .feature { border-bottom: 1px solid var(--line); }
       .feature:nth-child(2n) { border-right: 0; }
@@ -229,6 +240,19 @@
       <div class="feature"><strong>Type Lab + vector</strong><span>Trace lettering, edit nodes, build fonts, and combine paths</span></div>
       <div class="feature"><strong>Offline AI upscale</strong><span>Photo and art models at 2x, 3x, or 4x — artwork stays local</span></div>
       <div class="feature"><strong>Print True preview</strong><span>4000 px Ultra rendering, anti-aliased transforms, Camera Raw, and denoise</span></div>
+    </section>
+
+    <section class="update-preview" id="updates" aria-labelledby="update-title">
+      <div class="update-heading">
+        <h2 id="update-title">v0.0.20 preview</h2>
+        <p>The next Graphic Runner update adds faster creative workflows, AI-enhanced tools, independent artboards, deeper styling, and more precise editing. Current public downloads remain v0.0.19.1 until testing is complete.</p>
+      </div>
+      <img src="assets/GraphicRunner-v0.0.20-Updates.png" width="1800" height="2400" alt="Graphic Runner v0.0.20 feature update list">
+    </section>
+
+    <section class="privacy-note" aria-labelledby="privacy-title">
+      <h2 id="privacy-title">AI-enhanced features and privacy</h2>
+      <p>Installing, launching, or using Graphic Runner—including its AI-enhanced features—acknowledges the included license terms. AI-enhanced tools perform only their described editing functions. Graphic Runner does not collect personal data, upload artwork, monitor activity, build profiles, train on user content, or use a remote AI service. Processing stays on the user's device.</p>
     </section>
 
     <section class="utility" id="install" aria-label="Installation notes">
