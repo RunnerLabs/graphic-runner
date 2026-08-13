@@ -4,23 +4,22 @@ Graphic Runner is a free offline desktop graphics studio for text, images,
 logo-vector artwork, symbols, sketching, and print effects. The public beta is
 proprietary freeware, not open-source software.
 
-## Download v0.0.20.1
+## Download v0.0.20.2
 
 Download the current Windows and native Linux builds from the
-[official v0.0.20.1 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.20.1).
+[official v0.0.20.2 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.20.2).
 
-- `GraphicRunner-0.0.20.1-Windows-Setup.exe` - recommended Windows 10/11 installer.
-- `GraphicRunner-0.0.20.1-Windows-Installer.msi` - managed/silent Windows package.
-- `graphicrunner_0.0.20.1_amd64.deb` - native Ubuntu/Debian x64 installer.
-- `GraphicRunner-Linux-x64-0.0.20.1.tar.gz` - portable native Linux x64 bundle.
-- `SHA256SUMS_v0.0.20.1.txt` - checksums for every v0.0.20.1 download.
+- `GraphicRunner-0.0.20.2-Windows-Setup.exe` - recommended Windows 10/11 installer.
+- `graphicrunner_0.0.20.2_amd64.deb` - native Ubuntu/Debian x64 installer.
+- `GraphicRunner-Linux-x64-0.0.20.2.tar.gz` - portable native Linux x64 bundle.
+- `SHA256SUMS_v0.0.20.2.txt` - checksums for every v0.0.20.2 download.
 
 Every package includes Graphic Runner's Java runtime. Users do not need to
 install Java separately.
 
-## What is new in v0.0.20.1
+## What is new in v0.0.20.2
 
-![Graphic Runner v0.0.20.1 feature updates](assets/GraphicRunner-v0.0.20.1-Updates.png)
+![Graphic Runner v0.0.20.2 feature updates](assets/GraphicRunner-v0.0.20.2-Updates.png)
 
 - AI-enhanced object selection, selection cleanup, feathering, and local
   inpainting.
@@ -38,11 +37,13 @@ install Java separately.
   expanded dithering/glow, and additional themes.
 - Print True 4000 px preview, Runner Developer finishing, performance diagnostics,
   native Linux packaging, and source-free public downloads.
+- Selected painting now responds immediately and remains attached to the intended
+  layer after the stroke, including above a separate solid-plane layer.
 
 ## Windows installation
 
-1. Download `GraphicRunner-0.0.20.1-Windows-Setup.exe`.
-2. Verify its SHA-256 checksum against `SHA256SUMS_v0.0.20.1.txt`.
+1. Download `GraphicRunner-0.0.20.2-Windows-Setup.exe`.
+2. Verify its SHA-256 checksum against `SHA256SUMS_v0.0.20.2.txt`.
 3. Run the Setup EXE. It installs Graphic Runner for the current user, adds a
    Start-menu shortcut, and registers a normal Windows uninstaller.
 4. Accept the beta license when Graphic Runner opens.
@@ -55,25 +56,25 @@ permanent fix for the unsigned-publisher warning.
 
 ## Native Linux installation
 
-Graphic Runner v0.0.20.1 includes native x64 Linux builds. Wine and Bottles are
+Graphic Runner v0.0.20.2 includes native x64 Linux builds. Wine and Bottles are
 not required.
 
 ### Ubuntu/Debian package
 
-Download `graphicrunner_0.0.20.1_amd64.deb`, verify its checksum, then run:
+Download `graphicrunner_0.0.20.2_amd64.deb`, verify its checksum, then run:
 
 ```bash
-sudo apt install ./graphicrunner_0.0.20.1_amd64.deb
+sudo apt install ./graphicrunner_0.0.20.2_amd64.deb
 ```
 
 Launch **GraphicRunner** from the desktop application menu.
 
 ### Portable Linux bundle
 
-Download `GraphicRunner-Linux-x64-0.0.20.1.tar.gz`, verify it, then run:
+Download `GraphicRunner-Linux-x64-0.0.20.2.tar.gz`, verify it, then run:
 
 ```bash
-tar -xzf GraphicRunner-Linux-x64-0.0.20.1.tar.gz
+tar -xzf GraphicRunner-Linux-x64-0.0.20.2.tar.gz
 ./GraphicRunner/bin/GraphicRunner
 ```
 
@@ -83,22 +84,21 @@ and the normal X11/font libraries. The DEB declares its runtime dependencies.
 ## Verify your download
 
 ```text
-304327236A1F30A41FDFDC86FEA339A3878230F43F201D1E8F97FC728232D053  GraphicRunner-0.0.20.1-Windows-Setup.exe
-56ACCD65FDF64963360D761BA8240653DC5AB27E45EBF67A68FF506F3CC244DE  GraphicRunner-0.0.20.1-Windows-Installer.msi
-D54DA499983E0335E8328D7CBCFDAE66A45F118EC55D1EE6E063D342341A347C  graphicrunner_0.0.20.1_amd64.deb
-51B3AD2A6CFBE2772A48BFEBFFA8AA79995EF6499108378B8F46E8BAFA19E2B9  GraphicRunner-Linux-x64-0.0.20.1.tar.gz
+6F514F7F0DA7F709400226E88596D013985C62BB141F2DAE436CB9FE12A34DB3  GraphicRunner-0.0.20.2-Windows-Setup.exe
+EB244EAD75CC49686B7A02341EC4388FA17A50A8DF97009AF8AEA4F1949F1CE2  graphicrunner_0.0.20.2_amd64.deb
+08701B73B46E5C56DBD535897B8D01711226168328D4378B7128139F6250FBAA  GraphicRunner-Linux-x64-0.0.20.2.tar.gz
 ```
 
 Windows:
 
 ```powershell
-Get-FileHash .\GraphicRunner-0.0.20.1-Windows-Setup.exe -Algorithm SHA256
+Get-FileHash .\GraphicRunner-0.0.20.2-Windows-Setup.exe -Algorithm SHA256
 ```
 
 Linux:
 
 ```bash
-sha256sum graphicrunner_0.0.20.1_amd64.deb
+sha256sum graphicrunner_0.0.20.2_amd64.deb
 ```
 
 ## Privacy and source protection
