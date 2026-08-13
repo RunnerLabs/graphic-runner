@@ -21,7 +21,7 @@ Version 0.0.20 is a major offline editing update for Windows and native Linux.
   selections with invert and mask actions.
 - Paint, eraser, smudge, clone, flexible trace rulers, gradients, strokes,
   expanded dither/glow controls, and more themes.
-- Print True 4000 px preview, Camera Raw finishing, denoise, improved
+- Print True 4000 px preview, Runner Developer finishing, denoise, improved
   anti-aliasing, local performance diagnostics, and high-quality export.
 
 ## Downloads

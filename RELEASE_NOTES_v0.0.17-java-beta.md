@@ -15,7 +15,7 @@ not application source code.
 - Text, Image, Symbols, and Type Lab share a persistent design canvas.
 - Logo Vector remains a separate path-only workspace with editable SVG export.
 - Image mode includes stretchable solid planes.
-- Export includes Camera Raw-style sharpening, clarity, tonal, brightness,
+- Export includes Runner Developer sharpening, clarity, tonal, brightness,
   contrast, saturation, temperature, and tint finishing controls.
 
 ## Windows

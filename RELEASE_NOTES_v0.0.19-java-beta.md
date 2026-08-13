@@ -7,7 +7,7 @@ bundled license.
 ## Preview and finishing
 
 - Choose Standard, High, or Ultra canvas-preview quality in Settings.
-- Camera Raw adds sharpen, clarity, brightness, tone controls, color grading,
+- Runner Developer adds sharpen, clarity, brightness, tone controls, color grading,
   luminance denoise, and color denoise for final export adjustments.
 - The transparent alpha canvas is now borderless and easier to inspect.
 - A universal black-and-white filter is available across artwork modes.
