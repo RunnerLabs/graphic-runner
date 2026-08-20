@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ff4b12">
-  <meta name="description" content="Graphic Runner is a free offline graphics studio with Print True 4000 px preview, 28 effects, layers, masks, Type Lab, vector tools, Runner Developer, and local AI upscaling for Windows and Linux.">
+  <meta name="description" content="Graphic Runner v0.0.21 is a free offline graphics studio with Runner Text Track, advanced selections, Speed Form sketching, layers, artboards, vector tools, and local AI-enhanced editing for Windows and Linux.">
   <link rel="canonical" href="https://runnerlabs.github.io/graphic-runner/">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Graphic Runner">
   <meta property="og:title" content="Graphic Runner — Free Offline Design App">
-  <meta property="og:description" content="Edit fast, easy, and offline with 28 effects, layers, masks, Type Lab, vector tools, Runner Developer finishing, and local AI upscaling.">
+  <meta property="og:description" content="Edit fast, easy, and offline with Runner Text Track, advanced selections, Speed Form sketching, artboards, vector tools, and local AI-enhanced editing.">
   <meta property="og:url" content="https://runnerlabs.github.io/graphic-runner/">
   <meta property="og:image" content="https://runnerlabs.github.io/graphic-runner/assets/graphic-runner-social-card-orange.png">
   <meta property="og:image:secure_url" content="https://runnerlabs.github.io/graphic-runner/assets/graphic-runner-social-card-orange.png">
@@ -130,6 +130,9 @@
     .update-heading h2 { color: var(--cream); font-size: clamp(1.8rem, 4vw, 3.3rem); line-height: .92; text-transform: uppercase; }
     .update-heading p { max-width: 590px; margin: 0; color: var(--orange-soft); font-size: .72rem; line-height: 1.55; text-align: right; }
     .update-preview img { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: var(--black); }
+    .update-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin: 0; padding: 1px; list-style: none; background: var(--line); }
+    .update-list li { min-height: 92px; padding: 16px; color: var(--orange-soft); background: var(--black); font-size: .72rem; line-height: 1.55; }
+    .update-list strong { display: block; margin-bottom: 5px; color: var(--cream); font-family: Arial, Helvetica, sans-serif; font-size: .92rem; text-transform: uppercase; }
     .privacy-note { margin-top: 14px; padding: 18px; border: 1px solid var(--line); background: var(--black-2); }
     .privacy-note h2 { color: var(--cream); font-size: 1.15rem; text-transform: uppercase; }
     .privacy-note p { margin: 10px 0 0; color: var(--orange-soft); font-size: .72rem; line-height: 1.65; }
@@ -161,6 +164,7 @@
       .actions .button { flex: 1 1 180px; }
       .update-heading { align-items: flex-start; flex-direction: column; }
       .update-heading p { text-align: left; }
+      .update-list { grid-template-columns: 1fr; }
       .feature-strip { grid-template-columns: repeat(2, 1fr); }
       .feature { border-bottom: 1px solid var(--line); }
       .feature:nth-child(2n) { border-right: 0; }
@@ -199,7 +203,7 @@
       <div class="nav-links">
         <a href="#install">Install notes</a>
         <a href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Feedback</a>
-        <a class="download-link" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.20.2/GraphicRunner-0.0.20.2-Windows-Setup.exe">Download</a>
+        <a class="download-link" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.21/GraphicRunner-0.0.21-Windows-Setup.exe">Download</a>
       </div>
     </nav>
   </header>
@@ -208,7 +212,7 @@
     <section class="command-card" id="top" aria-labelledby="main-title">
       <div class="terminal-line">
         <span>$ graphic-runner --start</span>
-        <span class="status">WINDOWS v0.0.20.2 / LINUX v0.0.20.2</span>
+        <span class="status">WINDOWS v0.0.21 / LINUX v0.0.21</span>
       </div>
 
       <div class="ascii-wrap">
@@ -227,8 +231,8 @@
           <p>Designed for anyone who wants to explore their creative side without a pay wall and without an internet connection.</p>
         </div>
         <div class="actions" aria-label="Download and feedback actions">
-          <a class="button primary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.20.2/GraphicRunner-0.0.20.2-Windows-Setup.exe">Windows Setup v0.0.20.2</a>
-          <a class="button secondary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.20.2/graphicrunner_0.0.20.2_amd64.deb">Linux v0.0.20.2</a>
+          <a class="button primary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.21/GraphicRunner-0.0.21-Windows-Setup.exe">Windows Setup v0.0.21</a>
+          <a class="button secondary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.21/graphicrunner_0.0.21_amd64.deb">Linux v0.0.21</a>
           <a class="button secondary" href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Send feedback</a>
         </div>
       </div>
@@ -237,17 +241,24 @@
     <section class="feature-strip" aria-label="Graphic Runner features">
       <div class="feature"><strong>28 effects</strong><span>Mirror Alloy / Ghost Plume / Taffy Veil / Signal Filament</span></div>
       <div class="feature"><strong>Layers + masks</strong><span>Blend, select, paint, mask, align, flip, rotate, and use artboards</span></div>
-      <div class="feature"><strong>Type Lab + vector</strong><span>Trace lettering, edit nodes, build fonts, and combine paths</span></div>
+      <div class="feature"><strong>Text Track + vector</strong><span>Flow text on selections, edit nodes, style lettering, and combine paths</span></div>
       <div class="feature"><strong>AI-enhanced tools</strong><span>Select objects, inpaint areas, and upscale artwork locally</span></div>
       <div class="feature"><strong>Print True preview</strong><span>4000 px Ultra rendering, anti-aliased transforms, Runner Developer, and denoise</span></div>
     </section>
 
     <section class="update-preview" id="updates" aria-labelledby="update-title">
       <div class="update-heading">
-        <h2 id="update-title">v0.0.20.2 update</h2>
-        <p>The current Graphic Runner beta adds faster creative workflows, exclusive canvas-tool switching, AI-enhanced tools, independent artboards, deeper styling, and more precise editing. v0.0.20.2 also makes selected painting responsive and keeps completed paint visible on the intended layer.</p>
+        <h2 id="update-title">v0.0.21 update</h2>
+        <p>The current beta expands text, selections, sketching, artboards, effects, and project safety while reducing latency across masks, erasing, saves, and High/Ultra previews.</p>
       </div>
-      <img src="assets/GraphicRunner-v0.0.20.2-Updates.png" width="1800" height="2400" alt="Graphic Runner v0.0.20.2 feature update list">
+      <ul class="update-list">
+        <li><strong>Runner Text Track</strong>Flow editable text inside selections or along their outlines, then hand lettering to Type Lab for node edits.</li>
+        <li><strong>Advanced selection</strong>Bezier Pen selection, replace/add/subtract, locked regions, AI-enhanced selection, and raster selection strokes.</li>
+        <li><strong>Speed Form + guides</strong>Smoother editable strokes, flex rulers, symmetry, perspective grids, perspective shading, and composition overlays.</li>
+        <li><strong>Layers + artboards</strong>Clearer multi-select, merge selected/all, clipping, labels, movable independent artboards, and batch export.</li>
+        <li><strong>Pixel + blur engines</strong>Standalone pixel styles and Gaussian, Focus, and Speed blur with saved, undoable settings.</li>
+        <li><strong>Faster + safer</strong>Render caching, responsive masking and erasing, faster .grdoc saves, restricted document loading, and UI recovery.</li>
+      </ul>
     </section>
 
     <section class="privacy-note" aria-labelledby="privacy-title">
@@ -257,11 +268,11 @@
 
     <section class="utility" id="install" aria-label="Installation notes">
       <details>
-        <summary><h2>Windows 10/11</h2><span>v0.0.20.2 installer</span></summary>
+        <summary><h2>Windows 10/11</h2><span>v0.0.21 installer</span></summary>
         <div class="detail-body">
           <ol>
-            <li>Download and run <code>GraphicRunner-0.0.20.2-Windows-Setup.exe</code>.</li>
-            <li>Verify its SHA-256 checksum:<span class="checksum">6F514F7F0DA7F709400226E88596D013985C62BB141F2DAE436CB9FE12A34DB3</span></li>
+            <li>Download and run <code>GraphicRunner-0.0.21-Windows-Setup.exe</code>.</li>
+            <li>Verify its SHA-256 checksum:<span class="checksum">2A4A67C421FA42C4B744A8FC472FE4ED4C0E4D89142FCCB8973AFF6D05D3B2A5</span></li>
             <li>The installer includes Java, adds Graphic Runner to the Start menu, and registers a normal Windows uninstaller.</li>
             <li>This unsigned beta may display <strong>Windows protected your PC</strong>. After verifying the checksum, select <strong>More info</strong>, confirm the app name, then select <strong>Run anyway</strong>.</li>
             <li>Accept the beta license when Graphic Runner opens.</li>
@@ -271,15 +282,15 @@
       </details>
 
       <details id="linux-install">
-        <summary><h2>Linux x64</h2><span>v0.0.20.2 native installer</span></summary>
+        <summary><h2>Linux x64</h2><span>v0.0.21 native installer</span></summary>
         <div class="detail-body">
           <ol>
-            <li>Download <code>graphicrunner_0.0.20.2_amd64.deb</code> and verify its checksum:<span class="checksum">EB244EAD75CC49686B7A02341EC4388FA17A50A8DF97009AF8AEA4F1949F1CE2</span></li>
-            <li>Install it with <code>sudo apt install ./graphicrunner_0.0.20.2_amd64.deb</code>.</li>
+            <li>Download <code>graphicrunner_0.0.21_amd64.deb</code> and verify its checksum:<span class="checksum">BB8D5B0D49C242F1D28D91CA7B41E6FDBD9CC97E4235CAC863DDB3776C61E341</span></li>
+            <li>Install it with <code>sudo apt install ./graphicrunner_0.0.21_amd64.deb</code>.</li>
             <li>Launch <strong>GraphicRunner</strong> from your desktop application menu.</li>
-            <li>For a no-install option, download the portable <code>GraphicRunner-Linux-x64-0.0.20.2.tar.gz</code> bundle.</li>
+            <li>For a no-install option, download the portable <code>GraphicRunner-Linux-x64-0.0.21.tar.gz</code> bundle.</li>
           </ol>
-          <p class="detail-note">Java is included, and the DEB installs the standard Vulkan runtime used by AI upscale. Portable users need <code>libvulkan1</code> plus a current Vulkan-capable graphics driver. Wine and Bottles are not required.</p>
+          <p class="detail-note">Java is included, and the DEB declares the standard Vulkan and OpenMP runtimes used by AI upscale. Portable users need <code>libvulkan1</code>, <code>libgomp1</code>, and a current Vulkan-capable graphics driver. Wine and Bottles are not required.</p>
         </div>
       </details>
     </section>
@@ -289,7 +300,7 @@
     <div class="footer-row shell">
       <span>© 2026 Patrick Jamison / Graphic Runner proprietary freeware / source private</span>
       <div class="footer-links">
-        <a href="https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.20.2">Release files</a>
+        <a href="https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.21">Release files</a>
         <a href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Beta feedback</a>
         <a href="mailto:taskmaster@trunner.net">Contact</a>
       </div>

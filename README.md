@@ -4,46 +4,42 @@ Graphic Runner is a free offline desktop graphics studio for text, images,
 logo-vector artwork, symbols, sketching, and print effects. The public beta is
 proprietary freeware, not open-source software.
 
-## Download v0.0.20.2
+## Download v0.0.21
 
 Download the current Windows and native Linux builds from the
-[official v0.0.20.2 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.20.2).
+[official v0.0.21 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.21).
 
-- `GraphicRunner-0.0.20.2-Windows-Setup.exe` - recommended Windows 10/11 installer.
-- `graphicrunner_0.0.20.2_amd64.deb` - native Ubuntu/Debian x64 installer.
-- `GraphicRunner-Linux-x64-0.0.20.2.tar.gz` - portable native Linux x64 bundle.
-- `SHA256SUMS_v0.0.20.2.txt` - checksums for every v0.0.20.2 download.
+- `GraphicRunner-0.0.21-Windows-Setup.exe` - recommended Windows 10/11 installer.
+- `graphicrunner_0.0.21_amd64.deb` - native Ubuntu/Debian x64 installer.
+- `GraphicRunner-Linux-x64-0.0.21.tar.gz` - portable native Linux x64 bundle.
+- `SHA256SUMS_v0.0.21.txt` - checksums for every v0.0.21 download.
 
 Every package includes Graphic Runner's Java runtime. Users do not need to
 install Java separately.
 
-## What is new in v0.0.20.2
+## What is new in v0.0.21
 
-![Graphic Runner v0.0.20.2 feature updates](assets/GraphicRunner-v0.0.20.2-Updates.png)
-
-- AI-enhanced object selection, selection cleanup, feathering, and local
-  inpainting.
-- Dedicated Paint Color eyedropper in Image mode: press **Pick**, then sample
-  an exact visible canvas color to make it the active brush color.
-- Speed Form Mode with tapered industrial-sketch profiles, round or block
-  marker tips, and exclusive tool switching so only one canvas tool is active.
-- Independent, movable, resizable artboards with separate layer stacks and
-  single or batch export.
-- Persistent selections, polygon selection, invert selection, masking actions,
-  layer locking, clipping, and faster layer interaction.
-- Direct image corner resizing, cropping, alignment, rotation, flipping, and
-  Convert to Curves handoff.
-- Paint, eraser, smudge, clone, trace rulers, gradients, independent strokes,
-  expanded dithering/glow, and additional themes.
-- Print True 4000 px preview, Runner Developer finishing, performance diagnostics,
-  native Linux packaging, and source-free public downloads.
-- Selected painting now responds immediately and remains attached to the intended
-  layer after the stroke, including above a separate solid-plane layer.
+- **Runner Text Track** flows editable text inside a selection or around its
+  outline, with Style Type and Type Lab node-editing handoff.
+- **Advanced selections** add a Bezier Pen tool, replace/add/subtract modes,
+  locked selections, AI-enhanced object selection, and undoable raster strokes.
+- **Faster canvas work** adds bounded High/Ultra render caching, responsive
+  masking and erasing, faster project saves, and local performance diagnostics.
+- **Speed Form and drawing guides** add editable start/middle/end stroke handles,
+  smoother high-quality output, flex rulers, symmetry, perspective grids, and
+  perspective shading.
+- **Layers and artboards** add clearer multi-layer selection, selected/all merge,
+  clipping, independent movable artboards, batch export, labels, and color tags.
+- **Deeper styling** adds a standalone Pixel Engine, Gaussian/Focus/Speed blur,
+  text/vector gradients and strokes, selection strokes, and composition overlays.
+- **Safer editable projects** add Save As, quicker `.grdoc` saves, restricted
+  document loading, UI recovery tools, and source-free native packages.
+- AI-enhanced object selection, inpainting, and upscaling remain fully local.
 
 ## Windows installation
 
-1. Download `GraphicRunner-0.0.20.2-Windows-Setup.exe`.
-2. Verify its SHA-256 checksum against `SHA256SUMS_v0.0.20.2.txt`.
+1. Download `GraphicRunner-0.0.21-Windows-Setup.exe`.
+2. Verify its SHA-256 checksum against `SHA256SUMS_v0.0.21.txt`.
 3. Run the Setup EXE. It installs Graphic Runner for the current user, adds a
    Start-menu shortcut, and registers a normal Windows uninstaller.
 4. Accept the beta license when Graphic Runner opens.
@@ -56,25 +52,25 @@ permanent fix for the unsigned-publisher warning.
 
 ## Native Linux installation
 
-Graphic Runner v0.0.20.2 includes native x64 Linux builds. Wine and Bottles are
+Graphic Runner v0.0.21 includes native x64 Linux builds. Wine and Bottles are
 not required.
 
 ### Ubuntu/Debian package
 
-Download `graphicrunner_0.0.20.2_amd64.deb`, verify its checksum, then run:
+Download `graphicrunner_0.0.21_amd64.deb`, verify its checksum, then run:
 
 ```bash
-sudo apt install ./graphicrunner_0.0.20.2_amd64.deb
+sudo apt install ./graphicrunner_0.0.21_amd64.deb
 ```
 
 Launch **GraphicRunner** from the desktop application menu.
 
 ### Portable Linux bundle
 
-Download `GraphicRunner-Linux-x64-0.0.20.2.tar.gz`, verify it, then run:
+Download `GraphicRunner-Linux-x64-0.0.21.tar.gz`, verify it, then run:
 
 ```bash
-tar -xzf GraphicRunner-Linux-x64-0.0.20.2.tar.gz
+tar -xzf GraphicRunner-Linux-x64-0.0.21.tar.gz
 ./GraphicRunner/bin/GraphicRunner
 ```
 
@@ -84,21 +80,21 @@ and the normal X11/font libraries. The DEB declares its runtime dependencies.
 ## Verify your download
 
 ```text
-6F514F7F0DA7F709400226E88596D013985C62BB141F2DAE436CB9FE12A34DB3  GraphicRunner-0.0.20.2-Windows-Setup.exe
-EB244EAD75CC49686B7A02341EC4388FA17A50A8DF97009AF8AEA4F1949F1CE2  graphicrunner_0.0.20.2_amd64.deb
-08701B73B46E5C56DBD535897B8D01711226168328D4378B7128139F6250FBAA  GraphicRunner-Linux-x64-0.0.20.2.tar.gz
+2A4A67C421FA42C4B744A8FC472FE4ED4C0E4D89142FCCB8973AFF6D05D3B2A5  GraphicRunner-0.0.21-Windows-Setup.exe
+BB8D5B0D49C242F1D28D91CA7B41E6FDBD9CC97E4235CAC863DDB3776C61E341  graphicrunner_0.0.21_amd64.deb
+9948592D0D39B505C5049FD746B41EDC35AA12C20781C3AD5C013717DAE5D189  GraphicRunner-Linux-x64-0.0.21.tar.gz
 ```
 
 Windows:
 
 ```powershell
-Get-FileHash .\GraphicRunner-0.0.20.2-Windows-Setup.exe -Algorithm SHA256
+Get-FileHash .\GraphicRunner-0.0.21-Windows-Setup.exe -Algorithm SHA256
 ```
 
 Linux:
 
 ```bash
-sha256sum graphicrunner_0.0.20.2_amd64.deb
+sha256sum graphicrunner_0.0.21_amd64.deb
 ```
 
 ## Privacy and source protection
