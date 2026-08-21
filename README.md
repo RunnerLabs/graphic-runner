@@ -10,7 +10,7 @@ Download the current Windows and native Linux builds from the
 [official v0.0.21 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.21).
 
 - `GraphicRunner-0.0.21-Windows-Setup.exe` - recommended Windows 10/11 installer.
-- `graphicrunner_0.0.21-1_debian13_amd64.deb` - native Debian 13 / Parrot OS 7 x86-64 installer.
+- `graphicrunner_0.0.21-1_debian13_amd64.deb` - native Debian 13 x86-64 installer.
 - `GraphicRunner-Linux-x64-0.0.21.tar.gz` - portable native Linux x64 bundle.
 - `SHA256SUMS_v0.0.21.txt` - checksums for every v0.0.21 download.
 
@@ -55,7 +55,7 @@ permanent fix for the unsigned-publisher warning.
 Graphic Runner v0.0.21 includes native x64 Linux builds. Wine and Bottles are
 not required.
 
-### Debian 13 / Parrot OS 7 package
+### Debian 13 package
 
 Download `graphicrunner_0.0.21-1_debian13_amd64.deb`, verify its checksum, then run:
 
@@ -66,7 +66,7 @@ sudo apt install ./graphicrunner_0.0.21-1_debian13_amd64.deb
 
 Launch **GraphicRunner** from the desktop application menu.
 
-This DEB is built for Debian 13 and Parrot OS 7 on x86-64. Other Debian-based
+This DEB is built for Debian 13 on x86-64. Other Debian-based
 distributions may work but are not yet validated. Ubuntu uses different runtime
 package names and should not use this Debian 13 build. Fedora, openSUSE, Arch,
 SteamOS, ARM devices, and other non-Debian systems are not supported by this
