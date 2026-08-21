@@ -1,7 +1,7 @@
 # Graphic Runner v0.0.21 Beta
 
 Graphic Runner v0.0.21 is a source-free public beta for Windows 10/11 and
-Ubuntu/Debian x64. Processing remains local and offline.
+Debian 13 / Parrot OS 7 x86-64. Processing remains local and offline.
 
 ## Highlights
 
@@ -19,12 +19,16 @@ Ubuntu/Debian x64. Processing remains local and offline.
 ## Downloads
 
 - `GraphicRunner-0.0.21-Windows-Setup.exe` — Windows installer with bundled Java runtime.
-- `graphicrunner_0.0.21_amd64.deb` — native Ubuntu/Debian x64 installer.
+- `graphicrunner_0.0.21-1_debian13_amd64.deb` — native Debian 13 / Parrot OS 7 x86-64 installer.
 - `GraphicRunner-Linux-x64-0.0.21.tar.gz` — portable native Linux x64 package.
 - `SHA256SUMS_v0.0.21.txt` — SHA-256 checksums for all downloads.
 
 The Windows beta is not digitally signed yet, so SmartScreen may show an
 unknown-publisher warning. Verify the published checksum before running it.
 The Linux DEB declares its desktop, Vulkan, and OpenMP runtime dependencies.
+It is distribution-specific, not a universal Linux installer. Other Debian-based
+systems may work but are not yet validated. Ubuntu, Fedora, openSUSE, Arch,
+SteamOS, ARM devices, and other distributions require a separately validated
+package or the portable x64 bundle where compatible.
 
 Application source code and private build files are not included.

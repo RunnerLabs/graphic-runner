@@ -10,7 +10,7 @@ Download the current Windows and native Linux builds from the
 [official v0.0.21 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.21).
 
 - `GraphicRunner-0.0.21-Windows-Setup.exe` - recommended Windows 10/11 installer.
-- `graphicrunner_0.0.21_amd64.deb` - native Ubuntu/Debian x64 installer.
+- `graphicrunner_0.0.21-1_debian13_amd64.deb` - native Debian 13 / Parrot OS 7 x86-64 installer.
 - `GraphicRunner-Linux-x64-0.0.21.tar.gz` - portable native Linux x64 bundle.
 - `SHA256SUMS_v0.0.21.txt` - checksums for every v0.0.21 download.
 
@@ -55,15 +55,23 @@ permanent fix for the unsigned-publisher warning.
 Graphic Runner v0.0.21 includes native x64 Linux builds. Wine and Bottles are
 not required.
 
-### Ubuntu/Debian package
+### Debian 13 / Parrot OS 7 package
 
-Download `graphicrunner_0.0.21_amd64.deb`, verify its checksum, then run:
+Download `graphicrunner_0.0.21-1_debian13_amd64.deb`, verify its checksum, then run:
 
 ```bash
-sudo apt install ./graphicrunner_0.0.21_amd64.deb
+cd ~/Downloads
+sudo apt install ./graphicrunner_0.0.21-1_debian13_amd64.deb
 ```
 
 Launch **GraphicRunner** from the desktop application menu.
+
+This DEB is built for Debian 13 and Parrot OS 7 on x86-64. Other Debian-based
+distributions may work but are not yet validated. Ubuntu uses different runtime
+package names and should not use this Debian 13 build. Fedora, openSUSE, Arch,
+SteamOS, ARM devices, and other non-Debian systems are not supported by this
+DEB. Use the portable x64 bundle where its required desktop libraries are
+available. AI upscaling also requires a Vulkan-capable GPU and current driver.
 
 ### Portable Linux bundle
 
@@ -81,7 +89,7 @@ and the normal X11/font libraries. The DEB declares its runtime dependencies.
 
 ```text
 2A4A67C421FA42C4B744A8FC472FE4ED4C0E4D89142FCCB8973AFF6D05D3B2A5  GraphicRunner-0.0.21-Windows-Setup.exe
-BB8D5B0D49C242F1D28D91CA7B41E6FDBD9CC97E4235CAC863DDB3776C61E341  graphicrunner_0.0.21_amd64.deb
+D2FC93BF1B78F25872C82BD61E8486AE4A7EB33A1378BF7C6FA7BB1AA92EF25B  graphicrunner_0.0.21-1_debian13_amd64.deb
 9948592D0D39B505C5049FD746B41EDC35AA12C20781C3AD5C013717DAE5D189  GraphicRunner-Linux-x64-0.0.21.tar.gz
 ```
 
@@ -94,7 +102,7 @@ Get-FileHash .\GraphicRunner-0.0.21-Windows-Setup.exe -Algorithm SHA256
 Linux:
 
 ```bash
-sha256sum graphicrunner_0.0.21_amd64.deb
+sha256sum graphicrunner_0.0.21-1_debian13_amd64.deb
 ```
 
 ## Privacy and source protection

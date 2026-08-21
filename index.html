@@ -232,7 +232,7 @@
         </div>
         <div class="actions" aria-label="Download and feedback actions">
           <a class="button primary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.21/GraphicRunner-0.0.21-Windows-Setup.exe">Windows Setup v0.0.21</a>
-          <a class="button secondary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.21/graphicrunner_0.0.21_amd64.deb">Linux v0.0.21</a>
+          <a class="button secondary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.21/graphicrunner_0.0.21-1_debian13_amd64.deb">Linux — Debian 13 / Parrot 7</a>
           <a class="button secondary" href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Send feedback</a>
         </div>
       </div>
@@ -282,15 +282,15 @@
       </details>
 
       <details id="linux-install">
-        <summary><h2>Linux x64</h2><span>v0.0.21 native installer</span></summary>
+        <summary><h2>Linux x64</h2><span>Debian 13 / Parrot 7 package</span></summary>
         <div class="detail-body">
           <ol>
-            <li>Download <code>graphicrunner_0.0.21_amd64.deb</code> and verify its checksum:<span class="checksum">BB8D5B0D49C242F1D28D91CA7B41E6FDBD9CC97E4235CAC863DDB3776C61E341</span></li>
-            <li>Install it with <code>sudo apt install ./graphicrunner_0.0.21_amd64.deb</code>.</li>
+            <li>Download <code>graphicrunner_0.0.21-1_debian13_amd64.deb</code> and verify its checksum:<span class="checksum">D2FC93BF1B78F25872C82BD61E8486AE4A7EB33A1378BF7C6FA7BB1AA92EF25B</span></li>
+            <li>Install it with <code>cd ~/Downloads</code>, then <code>sudo apt install ./graphicrunner_0.0.21-1_debian13_amd64.deb</code>.</li>
             <li>Launch <strong>GraphicRunner</strong> from your desktop application menu.</li>
             <li>For a no-install option, download the portable <code>GraphicRunner-Linux-x64-0.0.21.tar.gz</code> bundle.</li>
           </ol>
-          <p class="detail-note">Java is included, and the DEB declares the standard Vulkan and OpenMP runtimes used by AI upscale. Portable users need <code>libvulkan1</code>, <code>libgomp1</code>, and a current Vulkan-capable graphics driver. Wine and Bottles are not required.</p>
+          <p class="detail-note"><strong>Compatibility:</strong> this DEB is built for Debian 13 and Parrot OS 7 on x86-64. Other Debian-based distributions may work but are not yet validated. Ubuntu uses different dependency names and should not use this Debian 13 package. Fedora, openSUSE, Arch, SteamOS, ARM, and other non-Debian systems are not supported by this DEB; use the portable x64 bundle where compatible. Java is included. AI upscaling requires <code>libvulkan1</code>, <code>libgomp1</code>, and a current Vulkan-capable graphics driver.</p>
         </div>
       </details>
     </section>
