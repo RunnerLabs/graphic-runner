@@ -232,7 +232,7 @@
         </div>
         <div class="actions" aria-label="Download and feedback actions">
           <a class="button primary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.22/GraphicRunner-0.0.22-Windows-Setup.exe">Windows Setup v0.0.22</a>
-          <a class="button secondary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.22/graphicrunner_0.0.22_amd64.deb">Linux v0.0.22</a>
+          <a class="button secondary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.22/graphicrunner_0.0.22-2_amd64.deb">Linux v0.0.22-2</a>
           <a class="button secondary" href="https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.22">All release files</a>
           <a class="button secondary" href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Send feedback</a>
         </div>
@@ -284,15 +284,15 @@
       </details>
 
       <details id="linux-install">
-        <summary><h2>Linux x64</h2><span>v0.0.22 native installer</span></summary>
+        <summary><h2>Linux x64</h2><span>v0.0.22-2 native installer</span></summary>
         <div class="detail-body">
           <ol>
-            <li>Download <a href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.22/graphicrunner_0.0.22_amd64.deb"><code>graphicrunner_0.0.22_amd64.deb</code></a> and verify its checksum:<span class="checksum">AC98F981679113A026C5ADB9F0FF72264C9C6C7A861D3E73EDC6557BBC166422</span></li>
-            <li>Install it with <code>sudo apt install ./graphicrunner_0.0.22_amd64.deb</code>.</li>
+            <li>Download <a href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.22/graphicrunner_0.0.22-2_amd64.deb"><code>graphicrunner_0.0.22-2_amd64.deb</code></a> and verify its checksum:<span class="checksum">A237EA49D37952737EBBB5A3F952B725904AD90E820276E2F19A1043A065D1D3</span></li>
+            <li>Install it with <code>sudo apt install ./graphicrunner_0.0.22-2_amd64.deb</code>.</li>
             <li>Launch <strong>GraphicRunner</strong> from your desktop application menu.</li>
             <li>For a no-install option, download the portable <a href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.22/GraphicRunner-Linux-x64-0.0.22.tar.gz"><code>GraphicRunner-Linux-x64-0.0.22.tar.gz</code></a> bundle.</li>
           </ol>
-          <p class="detail-note">Java is included, and the DEB declares the standard Vulkan and OpenMP runtimes used by AI upscale. Portable users need <code>libvulkan1</code>, <code>libgomp1</code>, and a current Vulkan-capable graphics driver. Wine and Bottles are not required.</p>
+          <p class="detail-note"><strong>Revision 2:</strong> host-specific legacy dependencies were removed so package resolution works across Ubuntu 22.04 and current Ubuntu releases. Java is included. Vulkan and OpenMP are optional suggestions used by native AI upscale; they never block the main editor installation. Wine and Bottles are not required.</p>
         </div>
       </details>
     </section>
