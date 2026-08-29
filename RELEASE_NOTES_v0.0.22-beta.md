@@ -6,6 +6,13 @@ Graphic Runner v0.0.22 is a source-free public beta for Windows 10/11 and
 Ubuntu/Debian x64. The application, AI inference, and artwork processing remain
 local and offline.
 
+### Linux installer revision 2
+
+- Replaced build-host-generated dependencies with a controlled cross-version runtime list.
+- Removed the obsolete `libpcre3` requirement that blocked installation on current Ubuntu releases.
+- Vulkan and OpenMP are optional suggestions for native AI upscale and no longer block the editor installation.
+- Dependency simulation and the complete bundled self-test pass on Ubuntu 22.04 and Ubuntu 26.04.
+
 ### Workspace and layers
 
 - Drag any named `// TOOL` section between tabs or reorder it in place.
@@ -67,7 +74,7 @@ local and offline.
 
 - `GraphicRunner-0.0.22-Windows-Setup.exe`
 - `GraphicRunner-0.0.22-Windows-Installer.msi`
-- `graphicrunner_0.0.22_amd64.deb`
+- `graphicrunner_0.0.22-2_amd64.deb`
 - `GraphicRunner-Linux-x64-0.0.22.tar.gz`
 - `SHA256SUMS_v0.0.22.txt`
 
