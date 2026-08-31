@@ -4,16 +4,15 @@ Graphic Runner is a free offline desktop graphics studio for text, images,
 logo-vector artwork, symbols, sketching, merchandise, and print effects. The
 public beta is proprietary freeware, not open-source software.
 
-## Download v0.0.22 Beta
+## Download v0.0.22.3 Beta
 
 Download the Creative Control Update from the
-[official v0.0.22 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.22).
+[official v0.0.22.3 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.22.3).
 
-- `GraphicRunner-0.0.22-Windows-Setup.exe` — recommended Windows 10/11 installer.
-- `GraphicRunner-0.0.22-Windows-Installer.msi` — Windows managed-install package.
-- `graphicrunner_0.0.22-2_amd64.deb` — dependency-corrected native Ubuntu/Debian x64 installer.
-- `GraphicRunner-Linux-x64-0.0.22.tar.gz` — portable native Linux x64 bundle.
-- `SHA256SUMS_v0.0.22.txt` — checksums for every download.
+- `GraphicRunner-0.0.22.3-Windows-Setup.exe` — recommended Windows 10/11 installer.
+- `graphicrunner_0.0.22.3-2_amd64.deb` — dependency-controlled native Ubuntu/Debian x64 installer.
+- `GraphicRunner-Linux-x64-0.0.22.3.tar.gz` — portable native Linux x64 bundle.
+- `SHA256SUMS_v0.0.22.3.txt` — checksums for every download.
 
 Every package includes Graphic Runner's Java runtime and offline AI models.
 Users do not need to install Java separately.
@@ -45,11 +44,16 @@ Users do not need to install Java separately.
   print canvas templates; scroll position retention during panel moves; Noise in
   Effects; unlocked text-box dimensions; improved sizing and clipped-label
   layouts; and Image mode as the default workspace and first layer.
+- **v0.0.22.3 refinements:** native vector text-to-curves, non-destructive
+  four-corner perspective for image/text/vector layers, draggable and detachable
+  right tabs, Vector planes and templates, faster Speed Form node editing,
+  improved Mock Runner cylinder controls, Effects search, Dark Gray and Task
+  themes, a UI-only blue-light filter, and repaired offline AI Object Selection.
 
 ## Windows installation
 
-1. Download `GraphicRunner-0.0.22-Windows-Setup.exe`.
-2. Verify its SHA-256 checksum against `SHA256SUMS_v0.0.22.txt`.
+1. Download `GraphicRunner-0.0.22.3-Windows-Setup.exe`.
+2. Verify its SHA-256 checksum against `SHA256SUMS_v0.0.22.3.txt`.
 3. Run Setup, then accept the beta license when Graphic Runner opens.
 4. This beta is not digitally signed yet, so Windows may show **Windows
    protected your PC**. After verifying the checksum, select **More info**,
@@ -63,13 +67,13 @@ permanent fix for the unsigned-publisher warning.
 Wine and Bottles are not required. For Ubuntu/Debian:
 
 ```bash
-sudo apt install ./graphicrunner_0.0.22-2_amd64.deb
+sudo apt install ./graphicrunner_0.0.22.3-2_amd64.deb
 ```
 
 For the portable bundle:
 
 ```bash
-tar -xzf GraphicRunner-Linux-x64-0.0.22.tar.gz
+tar -xzf GraphicRunner-Linux-x64-0.0.22.3.tar.gz
 ./GraphicRunner/bin/GraphicRunner
 ```
 
@@ -79,15 +83,14 @@ Linux desktop plus `libvulkan1` and `libgomp1` for the bundled AI upscaler.
 ## Verify your download
 
 ```text
-632BBB53FC064BA2F73CE7E31AA28CA4808AD33046B4279BA7982C72F2C85FE0  GraphicRunner-0.0.22-Windows-Installer.msi
-77B0F4E047DC2463BAFF73729B825EC33B6CE201214CC37DD8187D44268546FB  GraphicRunner-0.0.22-Windows-Setup.exe
-A237EA49D37952737EBBB5A3F952B725904AD90E820276E2F19A1043A065D1D3  graphicrunner_0.0.22-2_amd64.deb
-584BE8E7B1B6CEF203802126361905DD187BF26B246775D48FB610BB4B4E6434  GraphicRunner-Linux-x64-0.0.22.tar.gz
+28D2F616BA4BBBF9D2F1EC6DC0594FDCBC927DB4FAC29976068B9916A05F25DD  GraphicRunner-0.0.22.3-Windows-Setup.exe
+972B7931E35D25952DD51E2209E22F340CA26ED20BBF64CF3D66C91B1AA451E9  graphicrunner_0.0.22.3-2_amd64.deb
+8D92E7E6635730631467846A0C31E79B66578DE80950F2E10B83271782499DC3  GraphicRunner-Linux-x64-0.0.22.3.tar.gz
 ```
 
-Windows: `Get-FileHash .\GraphicRunner-0.0.22-Windows-Setup.exe -Algorithm SHA256`
+Windows: `Get-FileHash .\GraphicRunner-0.0.22.3-Windows-Setup.exe -Algorithm SHA256`
 
-Linux: `sha256sum graphicrunner_0.0.22-2_amd64.deb`
+Linux: `sha256sum graphicrunner_0.0.22.3-2_amd64.deb`
 
 ## Privacy and source protection
 
