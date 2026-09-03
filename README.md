@@ -4,20 +4,32 @@ Graphic Runner is a free offline desktop graphics studio for text, images,
 logo-vector artwork, symbols, sketching, merchandise, and print effects. The
 public beta is proprietary freeware, not open-source software.
 
-## Download v0.0.22.3 Beta
+## Download v0.0.22.4 Beta
 
-Download the Creative Control Update from the
-[official v0.0.22.3 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.22.3).
+Download the Pattern, Express & Export update from the
+[official v0.0.22.4 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.22.4).
 
-- `GraphicRunner-0.0.22.3-Windows-Setup.exe` — recommended Windows 10/11 installer.
-- `graphicrunner_0.0.22.3-2_amd64.deb` — dependency-controlled native Ubuntu/Debian x64 installer.
-- `GraphicRunner-Linux-x64-0.0.22.3.tar.gz` — portable native Linux x64 bundle.
-- `SHA256SUMS_v0.0.22.3.txt` — checksums for every download.
+- `GraphicRunner-0.0.22.4-Windows-Setup.exe` — recommended Windows 10/11 installer.
+- `graphicrunner_0.0.22.4-1_amd64.deb` — native Ubuntu 22.04+ x64 installer with declared desktop dependencies.
+- `GraphicRunner-Linux-x64-0.0.22.4.tar.gz` — portable native Linux x64 bundle.
+- `SHA256SUMS_v0.0.22.4.txt` — checksums for every download.
 
 Every package includes Graphic Runner's Java runtime and offline AI models.
 Users do not need to install Java separately.
 
-## Creative Control Update
+## New in v0.0.22.4
+
+- **Pattern Maker:** Grid, Brick, Half-drop, and Mirror layouts with a live master and editable area handles. Fill Area automatically adds repeats as motifs shrink; manual rows and columns support up to 100 each.
+- **Pattern selection:** clicking visible repetitions selects their owning layer, while transparent gaps can select artwork underneath.
+- **Runner Express and Advanced:** choose a simpler workspace or the full toolset at startup, and switch without stripping document capabilities. Narrow typography controls fit the left panel.
+- **Fonts and search:** searchable fonts, previews, installed-font refresh, vertical text, and navigation-only command search.
+- **History and responsiveness:** improved completed-gesture undo/redo, adaptive previews, and pattern caching.
+- **Exact export:** shared dimension presets and orientation choices, pre-save preview, encoded file size, and an Export Complete dialog with Open Folder.
+- **Linux verification:** DEB and portable tests, dependency resolution, real offline AI inference, and install/launch/remove checks on Ubuntu 22.04 and 26.04.
+
+[Full v0.0.22.4 release notes](RELEASE_NOTES_v0.0.22.4-beta.md)
+
+## Creative Control features
 
 - **Arrange the workspace your way:** move tool panels by dragging their `//`
   headings, or use Settings > UI Manager to reorder, move, hide, restore, and
@@ -44,7 +56,7 @@ Users do not need to install Java separately.
   print canvas templates; scroll position retention during panel moves; Noise in
   Effects; unlocked text-box dimensions; improved sizing and clipped-label
   layouts; and Image mode as the default workspace and first layer.
-- **v0.0.22.3 refinements:** native vector text-to-curves, non-destructive
+- **Earlier creative controls:** native vector text-to-curves, non-destructive
   four-corner perspective for image/text/vector layers, draggable and detachable
   right tabs, Vector planes and templates, faster Speed Form node editing,
   improved Mock Runner cylinder controls, Effects search, Dark Gray and Task
@@ -52,8 +64,8 @@ Users do not need to install Java separately.
 
 ## Windows installation
 
-1. Download `GraphicRunner-0.0.22.3-Windows-Setup.exe`.
-2. Verify its SHA-256 checksum against `SHA256SUMS_v0.0.22.3.txt`.
+1. Download `GraphicRunner-0.0.22.4-Windows-Setup.exe`.
+2. Verify its SHA-256 checksum against `SHA256SUMS_v0.0.22.4.txt`.
 3. Run Setup, then accept the beta license when Graphic Runner opens.
 4. This beta is not digitally signed yet, so Windows may show **Windows
    protected your PC**. After verifying the checksum, select **More info**,
@@ -64,33 +76,34 @@ permanent fix for the unsigned-publisher warning.
 
 ## Native Linux installation
 
-Wine and Bottles are not required. For Ubuntu/Debian:
+Wine and Bottles are not required. For Ubuntu 22.04 or newer:
 
 ```bash
-sudo apt install ./graphicrunner_0.0.22.3-2_amd64.deb
+sudo apt install ./graphicrunner_0.0.22.4-1_amd64.deb
 ```
 
 For the portable bundle:
 
 ```bash
-tar -xzf GraphicRunner-Linux-x64-0.0.22.3.tar.gz
+tar -xzf GraphicRunner-Linux-x64-0.0.22.4.tar.gz
 ./GraphicRunner/bin/GraphicRunner
 ```
 
-The DEB declares its runtime dependencies. Portable users need a graphical x64
-Linux desktop plus `libvulkan1` and `libgomp1` for the bundled AI upscaler.
+The DEB includes a verified Temurin Java runtime and declares its desktop dependencies, including fonts, X11, audio, and GTK with modern t64 package alternatives. The portable bundle needs the same system libraries. Both formats were tested on Ubuntu 22.04 and 26.04.
+
+Native AI upscaling additionally needs `libvulkan1`, `libgomp1`, and a compatible Vulkan device/driver. These are optional for the core editor; GPU upscaling is not guaranteed on every system.
 
 ## Verify your download
 
 ```text
-28D2F616BA4BBBF9D2F1EC6DC0594FDCBC927DB4FAC29976068B9916A05F25DD  GraphicRunner-0.0.22.3-Windows-Setup.exe
-972B7931E35D25952DD51E2209E22F340CA26ED20BBF64CF3D66C91B1AA451E9  graphicrunner_0.0.22.3-2_amd64.deb
-8D92E7E6635730631467846A0C31E79B66578DE80950F2E10B83271782499DC3  GraphicRunner-Linux-x64-0.0.22.3.tar.gz
+68A175CC963050E6921B9A655F7764D0A20B0F43DB71A5F6955D7D8D60880A8F  GraphicRunner-0.0.22.4-Windows-Setup.exe
+465BDCE1F1F83679F0965657B1324560033027FD85D39582F32B47C3FD7D4DC2  graphicrunner_0.0.22.4-1_amd64.deb
+C5D820966DF50F046213964EE08B7A278BB19A85444469CC4EFD3E4DA05245A7  GraphicRunner-Linux-x64-0.0.22.4.tar.gz
 ```
 
-Windows: `Get-FileHash .\GraphicRunner-0.0.22.3-Windows-Setup.exe -Algorithm SHA256`
+Windows: `Get-FileHash .\GraphicRunner-0.0.22.4-Windows-Setup.exe -Algorithm SHA256`
 
-Linux: `sha256sum graphicrunner_0.0.22.3-2_amd64.deb`
+Linux: `sha256sum graphicrunner_0.0.22.4-1_amd64.deb`
 
 ## Privacy and source protection
 

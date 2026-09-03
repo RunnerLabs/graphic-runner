@@ -47,7 +47,7 @@ bundle, publish, rebrand, relabel, or present Graphic Runner as your
 own product or work. Do not charge anyone for the Software itself.
 Instead, share this official download page:
 
-https://github.com/RunnerLabs/graphic-runner/releases/latest
+https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.22.4
 
 Violating these restrictions is outside the license and may terminate
 your right to use Graphic Runner. Graphic Runner is a neutral creative
@@ -65,7 +65,7 @@ The Windows installer is not digitally signed yet, so Microsoft Defender
 SmartScreen may report an unknown publisher. Download only from the
 official release page above.
 
-Verify the installer against SHA256SUMS.txt before running it. Do not
+Verify the installer against SHA256SUMS_v0.0.22.4.txt before running it. Do not
 disable Microsoft Defender or SmartScreen.
 
 Linux users can install the native x64 .deb or run the portable x64
