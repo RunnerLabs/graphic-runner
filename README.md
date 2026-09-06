@@ -4,30 +4,30 @@ Graphic Runner is a free offline desktop graphics studio for text, images,
 logo-vector artwork, symbols, sketching, merchandise, and print effects. The
 public beta is proprietary freeware, not open-source software.
 
-## Download v0.0.22.4 Beta
+## Download v0.0.23 Beta
 
-Download the Pattern, Express & Export update from the
-[official v0.0.22.4 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.22.4).
+Download the Photo Runner, Contour Flow & Masking update from the
+[official v0.0.23 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.23).
 
-- `GraphicRunner-0.0.22.4-Windows-Setup.exe` — recommended Windows 10/11 installer.
-- `graphicrunner_0.0.22.4-1_amd64.deb` — native Ubuntu 22.04+ x64 installer with declared desktop dependencies.
-- `GraphicRunner-Linux-x64-0.0.22.4.tar.gz` — portable native Linux x64 bundle.
-- `SHA256SUMS_v0.0.22.4.txt` — checksums for every download.
+- `GraphicRunner-0.0.23-Windows-Setup.exe` — recommended Windows 10/11 installer.
+- `graphicrunner_0.0.23-1_amd64.deb` — native Ubuntu 22.04+ x64 installer with declared desktop dependencies.
+- `GraphicRunner-Linux-x64-0.0.23.tar.gz` — portable native Linux x64 bundle.
+- `SHA256SUMS_v0.0.23.txt` — checksums for every download.
 
 Every package includes Graphic Runner's Java runtime and offline AI models.
 Users do not need to install Java separately.
 
-## New in v0.0.22.4
+## New in v0.0.23
 
-- **Pattern Maker:** Grid, Brick, Half-drop, and Mirror layouts with a live master and editable area handles. Fill Area automatically adds repeats as motifs shrink; manual rows and columns support up to 100 each.
-- **Pattern selection:** clicking visible repetitions selects their owning layer, while transparent gaps can select artwork underneath.
-- **Runner Express and Advanced:** choose a simpler workspace or the full toolset at startup, and switch without stripping document capabilities. Narrow typography controls fit the left panel.
-- **Fonts and search:** searchable fonts, previews, installed-font refresh, vertical text, and navigation-only command search.
-- **History and responsiveness:** improved completed-gesture undo/redo, adaptive previews, and pattern caching.
-- **Exact export:** shared dimension presets and orientation choices, pre-save preview, encoded file size, and an Export Complete dialog with Open Folder.
-- **Linux verification:** DEB and portable tests, dependency resolution, real offline AI inference, and install/launch/remove checks on Ubuntu 22.04 and 26.04.
+- Photo Runner adjustments, fine grain, luminance-preserving color balance, and selective HSL.
+- Contour Flow and Signal Track variants that stack with dithering and Photo Runner.
+- Source colors by default, adjustable palette mixing, transparent gaps, and finer line spacing.
+- Searchable Main Glow and finished-layer blur with Preserve Alpha.
+- Larger masking and Pattern Maker controls, crop locking, Fit Canvas to Image, and accessible DTF preparation.
+- Cached mask effects and coalesced preview requests for more responsive masking.
+- Explicit Linux desktop, Vulkan-loader, and OpenMP dependencies.
 
-[Full v0.0.22.4 release notes](RELEASE_NOTES_v0.0.22.4-beta.md)
+[Full v0.0.23 release notes](RELEASE_NOTES_v0.0.23-beta.md)
 
 ## Creative Control features
 
@@ -64,8 +64,8 @@ Users do not need to install Java separately.
 
 ## Windows installation
 
-1. Download `GraphicRunner-0.0.22.4-Windows-Setup.exe`.
-2. Verify its SHA-256 checksum against `SHA256SUMS_v0.0.22.4.txt`.
+1. Download `GraphicRunner-0.0.23-Windows-Setup.exe`.
+2. Verify its SHA-256 checksum against `SHA256SUMS_v0.0.23.txt`.
 3. Run Setup, then accept the beta license when Graphic Runner opens.
 4. This beta is not digitally signed yet, so Windows may show **Windows
    protected your PC**. After verifying the checksum, select **More info**,
@@ -79,13 +79,13 @@ permanent fix for the unsigned-publisher warning.
 Wine and Bottles are not required. For Ubuntu 22.04 or newer:
 
 ```bash
-sudo apt install ./graphicrunner_0.0.22.4-1_amd64.deb
+sudo apt install ./graphicrunner_0.0.23-1_amd64.deb
 ```
 
 For the portable bundle:
 
 ```bash
-tar -xzf GraphicRunner-Linux-x64-0.0.22.4.tar.gz
+tar -xzf GraphicRunner-Linux-x64-0.0.23.tar.gz
 ./GraphicRunner/bin/GraphicRunner
 ```
 
@@ -96,14 +96,14 @@ Native AI upscaling additionally needs `libvulkan1`, `libgomp1`, and a compatibl
 ## Verify your download
 
 ```text
-68A175CC963050E6921B9A655F7764D0A20B0F43DB71A5F6955D7D8D60880A8F  GraphicRunner-0.0.22.4-Windows-Setup.exe
-465BDCE1F1F83679F0965657B1324560033027FD85D39582F32B47C3FD7D4DC2  graphicrunner_0.0.22.4-1_amd64.deb
-C5D820966DF50F046213964EE08B7A278BB19A85444469CC4EFD3E4DA05245A7  GraphicRunner-Linux-x64-0.0.22.4.tar.gz
+68A175CC963050E6921B9A655F7764D0A20B0F43DB71A5F6955D7D8D60880A8F  GraphicRunner-0.0.23-Windows-Setup.exe
+465BDCE1F1F83679F0965657B1324560033027FD85D39582F32B47C3FD7D4DC2  graphicrunner_0.0.23-1_amd64.deb
+C5D820966DF50F046213964EE08B7A278BB19A85444469CC4EFD3E4DA05245A7  GraphicRunner-Linux-x64-0.0.23.tar.gz
 ```
 
-Windows: `Get-FileHash .\GraphicRunner-0.0.22.4-Windows-Setup.exe -Algorithm SHA256`
+Windows: `Get-FileHash .\GraphicRunner-0.0.23-Windows-Setup.exe -Algorithm SHA256`
 
-Linux: `sha256sum graphicrunner_0.0.22.4-1_amd64.deb`
+Linux: `sha256sum graphicrunner_0.0.23-1_amd64.deb`
 
 ## Privacy and source protection
 
