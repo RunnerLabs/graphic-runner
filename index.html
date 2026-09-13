@@ -4,312 +4,175 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ff4b12">
-  <meta name="description" content="Graphic Runner v0.0.23 Beta is a free offline graphics studio for Windows and Linux with Photo Runner, Contour Flow, color grading, smoother masking, and local AI.">
+  <meta name="description" content="Graphic Runner v0.0.23 Beta is a fast, local graphics editor with Photo Runner, Contour Flow, smoother masking, and offline AI for Windows and Linux.">
   <link rel="canonical" href="https://runnerlabs.github.io/graphic-runner/">
-
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Graphic Runner">
-  <meta property="og:title" content="Graphic Runner — Free Offline Design App">
-  <meta property="og:description" content="New in v0.0.23 Beta: Photo Runner, Contour Flow, color grading, Main Glow, and smoother masking. Design locally on Windows and Linux.">
+  <meta property="og:title" content="Graphic Runner - Edit fast. Easy. Offline.">
+  <meta property="og:description" content="Make graphics offline. Fast, local, yours.">
   <meta property="og:url" content="https://runnerlabs.github.io/graphic-runner/">
   <meta property="og:image" content="https://runnerlabs.github.io/graphic-runner/assets/graphic-runner-social-card-orange.png">
-  <meta property="og:image:secure_url" content="https://runnerlabs.github.io/graphic-runner/assets/graphic-runner-social-card-orange.png">
-  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Graphic Runner public beta — free offline design app">
-
+  <meta property="og:image:alt" content="Graphic Runner public beta">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Graphic Runner — Free Offline Design App">
-  <meta name="twitter:description" content="Edit fast, easy, and offline. High-impact graphics without the cloud.">
+  <meta name="twitter:title" content="Graphic Runner - Edit fast. Easy. Offline.">
+  <meta name="twitter:description" content="Make graphics offline. Fast, local, yours.">
   <meta name="twitter:image" content="https://runnerlabs.github.io/graphic-runner/assets/graphic-runner-social-card-orange.png">
-  <meta name="twitter:image:alt" content="Graphic Runner public beta — free offline design app">
-
-  <title>Graphic Runner — Edit Fast, Easy, and Offline</title>
+  <title>Graphic Runner - Edit Fast. Easy. Offline.</title>
   <link rel="icon" type="image/png" href="assets/graphic-runner-ember-gr.png">
   <link rel="apple-touch-icon" href="assets/graphic-runner-ember-gr.png">
-
   <style>
-    :root {
-      color-scheme: dark;
-      --orange: #ff4b12;
-      --orange-soft: #ff7645;
-      --black: #100b09;
-      --black-2: #1c110d;
-      --cream: #ffe2d3;
-      --line: rgba(255, 75, 18, .42);
-      --max: 1160px;
-    }
-
+    :root { --field: #ff4b12; --ink: #0d0908; --max: 1180px; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--orange);
-      background: var(--black);
-      font-family: "Courier New", Courier, monospace;
-    }
+    body { margin: 0; color: var(--ink); background: var(--field); font-family: Arial, Helvetica, sans-serif; }
     a { color: inherit; }
     button, summary { font: inherit; }
-    .shell { width: min(calc(100% - 32px), var(--max)); margin-inline: auto; }
-    .skip-link { position: absolute; left: 16px; top: -80px; z-index: 20; padding: 10px 14px; color: var(--orange); background: var(--black); border: 2px solid var(--orange); }
+    .shell { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
+    .mono { font-family: "Courier New", Courier, monospace; }
+    .skip-link { position: fixed; top: -80px; left: 16px; z-index: 20; padding: 12px 16px; color: var(--field); background: var(--ink); border: 2px solid var(--ink); font: 700 .75rem/1 "Courier New", monospace; text-transform: uppercase; }
     .skip-link:focus { top: 12px; }
-    :focus-visible { outline: 3px solid var(--cream); outline-offset: 3px; }
-
-    header { border-bottom: 1px solid var(--line); }
-    .nav { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
-    .brand { color: var(--orange); font-weight: 700; letter-spacing: -.04em; text-decoration: none; }
-    .brand span { color: var(--cream); }
-    .nav-links { display: flex; align-items: center; gap: 18px; }
-    .nav-links a { color: var(--orange-soft); font-size: .76rem; text-decoration: none; text-transform: uppercase; }
-    .nav-links a:hover { color: var(--cream); }
-    .nav-links .download-link { padding: 9px 12px; color: var(--black); background: var(--orange); font-weight: 700; }
-    .nav-links .download-link:hover { color: var(--black); background: var(--cream); }
-
-    main { padding: 28px 0 36px; }
-    .command-card {
-      position: relative;
-      min-height: min(700px, calc(100vh - 112px));
-      display: flex;
-      flex-direction: column;
-      padding: clamp(22px, 4vw, 48px);
-      color: var(--black);
-      background: var(--orange);
-      border: 3px solid var(--orange);
-      box-shadow: 12px 12px 0 var(--black-2), 12px 12px 0 1px var(--orange);
-    }
-    .terminal-line { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 14px; border-bottom: 2px solid var(--black); font-size: .74rem; font-weight: 700; text-transform: uppercase; }
-    .status { display: flex; align-items: center; gap: 7px; }
-    .status::before { width: 8px; height: 8px; content: ""; background: var(--black); border-radius: 50%; }
-
-    .ascii-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex: 1;
-      min-height: 220px;
-      margin: 22px 0;
-      padding: clamp(22px, 3.8vw, 38px) clamp(14px, 2.8vw, 30px);
-      overflow: hidden;
-      color: var(--black);
-      background: var(--orange);
-      border: 0;
-      border-radius: 0;
-      box-shadow: none;
-    }
-    .ascii-title {
-      width: max-content;
-      margin: 0;
-      color: inherit;
-      font: 400 clamp(5.2px, 1.75vw, 20px)/1.06 Consolas, "Courier New", Courier, monospace;
-      letter-spacing: 0;
-      white-space: pre;
-      text-shadow: none;
-      -webkit-font-smoothing: antialiased;
-    }
-    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-
-    .hero-bottom { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 28px; padding-top: 22px; border-top: 3px solid var(--black); }
-    h2, h3 { margin: 0; font-family: Arial, Helvetica, sans-serif; font-weight: 900; letter-spacing: -.055em; }
-    .hero-copy h2 { max-width: 720px; font-size: clamp(2.8rem, 6.5vw, 6rem); line-height: .84; text-transform: uppercase; }
-    .hero-copy p { max-width: 670px; margin: 18px 0 0; font-size: clamp(.85rem, 1.35vw, 1.02rem); line-height: 1.55; }
-    .actions { display: grid; gap: 9px; min-width: 210px; }
-    .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; padding: 12px 16px; border: 2px solid var(--black); font-size: .78rem; font-weight: 700; text-align: center; text-decoration: none; text-transform: uppercase; }
-    .button.primary { color: var(--orange); background: var(--black); }
-    .button.primary:hover { color: var(--black); background: var(--cream); }
-    .button.secondary:hover { color: var(--orange); background: var(--black); }
-
-    .feature-strip { display: grid; grid-template-columns: repeat(5, 1fr); margin-top: 26px; border: 1px solid var(--line); }
-    .feature { min-width: 0; padding: 17px 16px; border-right: 1px solid var(--line); }
-    .feature:last-child { border-right: 0; }
-    .feature strong { display: block; color: var(--cream); font-family: Arial, Helvetica, sans-serif; font-size: .92rem; font-weight: 900; letter-spacing: -.03em; text-transform: uppercase; }
-    .feature span { display: block; margin-top: 5px; color: var(--orange-soft); font-size: .67rem; line-height: 1.35; }
-
-    .update-preview { margin-top: 14px; padding: 18px; border: 1px solid var(--line); background: var(--black-2); }
-    .update-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; padding: 4px 2px 17px; }
-    .update-heading h2 { color: var(--cream); font-size: clamp(1.8rem, 4vw, 3.3rem); line-height: .92; text-transform: uppercase; }
-    .update-heading p { max-width: 590px; margin: 0; color: var(--orange-soft); font-size: .72rem; line-height: 1.55; text-align: right; }
-    .update-preview img { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: var(--black); }
-    .update-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin: 0; padding: 1px; list-style: none; background: var(--line); }
-    .update-list li { min-height: 92px; padding: 16px; color: var(--orange-soft); background: var(--black); font-size: .72rem; line-height: 1.55; }
-    .update-list strong { display: block; margin-bottom: 5px; color: var(--cream); font-family: Arial, Helvetica, sans-serif; font-size: .92rem; text-transform: uppercase; }
-    .privacy-note { margin-top: 14px; padding: 18px; border: 1px solid var(--line); background: var(--black-2); }
-    .privacy-note h2 { color: var(--cream); font-size: 1.15rem; text-transform: uppercase; }
-    .privacy-note p { margin: 10px 0 0; color: var(--orange-soft); font-size: .72rem; line-height: 1.65; }
-
-    .utility { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
-    details { border: 1px solid var(--line); background: var(--black-2); }
-    summary { min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 16px 18px; color: var(--cream); cursor: pointer; list-style: none; }
+    :focus-visible { outline: 4px solid var(--ink); outline-offset: 4px; }
+    header { border-bottom: 3px solid var(--ink); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: baseline; gap: 14px; color: var(--ink); font-weight: 900; text-decoration: none; text-transform: uppercase; }
+    .brand-mark { font-size: 2rem; line-height: 1; letter-spacing: -.08em; }
+    .brand-name { font: 700 .76rem/1 "Courier New", monospace; letter-spacing: .16em; }
+    .nav-links { display: flex; align-items: center; gap: 20px; }
+    .nav-links a { font: 700 .72rem/1 "Courier New", monospace; text-decoration: none; text-transform: uppercase; }
+    .nav-links a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
+    .nav-links .download-link { padding: 12px 15px; color: var(--field); background: var(--ink); }
+    .hero { padding: clamp(40px, 7vw, 88px) 0 42px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .62fr); gap: clamp(34px, 7vw, 92px); align-items: end; }
+    .kicker, .stamp { font: 700 .78rem/1.3 "Courier New", Courier, monospace; letter-spacing: .14em; text-transform: uppercase; }
+    .kicker { margin: 0 0 24px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 820px; margin-bottom: 30px; font-size: clamp(4.2rem, 10.5vw, 9.6rem); font-weight: 900; line-height: .78; letter-spacing: -.085em; text-transform: uppercase; }
+    .lede { max-width: 650px; margin-bottom: 0; font-size: clamp(1.15rem, 2vw, 1.55rem); line-height: 1.35; }
+    .monogram { display: grid; min-height: 360px; place-items: center; border: 4px solid var(--ink); font-size: clamp(8rem, 20vw, 17rem); font-weight: 900; line-height: .7; letter-spacing: -.13em; overflow: hidden; }
+    .monogram span { transform: translateX(-.05em); }
+    .proof-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 42px; padding-top: 22px; border-top: 3px solid var(--ink); }
+    .proof-row span { padding: 9px 12px; border: 2px solid var(--ink); }
+    .action-band { color: var(--field); background: var(--ink); }
+    .action-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 28px; min-height: 156px; padding-block: 30px; }
+    .action-row p { max-width: 690px; margin-bottom: 0; font-size: clamp(1.8rem, 4vw, 3.6rem); font-weight: 900; line-height: .95; letter-spacing: -.05em; text-transform: uppercase; }
+    .actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+    .button { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; padding: 13px 17px; border: 2px solid var(--field); color: var(--field); background: var(--ink); font: 700 .75rem/1 "Courier New", Courier, monospace; text-align: center; text-decoration: none; text-transform: uppercase; }
+    .button.primary { color: var(--ink); background: var(--field); }
+    .button:hover { color: var(--ink); background: var(--field); }
+    .button.primary:hover { color: var(--field); background: var(--ink); }
+    .section { padding: clamp(58px, 8vw, 104px) 0; border-bottom: 3px solid var(--ink); }
+    .section-heading { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(260px, .6fr); gap: 34px; align-items: end; margin-bottom: 40px; }
+    h2 { margin-bottom: 0; font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 900; line-height: .84; letter-spacing: -.07em; text-transform: uppercase; }
+    .section-heading p { margin-bottom: 0; font-size: 1.05rem; line-height: 1.5; }
+    .capability-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 3px solid var(--ink); border-left: 3px solid var(--ink); }
+    .capability { min-height: 220px; padding: 24px; border-right: 3px solid var(--ink); border-bottom: 3px solid var(--ink); }
+    .capability .stamp { display: block; margin-bottom: 44px; }
+    h3 { margin-bottom: 12px; font-size: 1.45rem; line-height: 1; text-transform: uppercase; }
+    .capability p { margin-bottom: 0; line-height: 1.5; }
+    .release-grid { display: grid; grid-template-columns: .65fr 1.35fr; border: 3px solid var(--ink); }
+    .release-mark { padding: 28px; border-right: 3px solid var(--ink); }
+    .release-mark strong { display: block; margin-top: 38px; font-size: clamp(4rem, 10vw, 8rem); line-height: .75; letter-spacing: -.08em; }
+    .release-list { display: grid; grid-template-columns: 1fr 1fr; }
+    .release-item { min-height: 150px; padding: 24px; border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
+    .release-item:nth-child(2n) { border-right: 0; }
+    .release-item:nth-last-child(-n+2) { border-bottom: 0; }
+    .release-item strong { display: block; margin-bottom: 8px; text-transform: uppercase; }
+    .release-item p { margin-bottom: 0; line-height: 1.45; }
+    .trust-note { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 24px; margin-top: 28px; padding-top: 24px; border-top: 3px solid var(--ink); }
+    .trust-note strong { font-size: 1.15rem; text-transform: uppercase; }
+    .trust-note p { max-width: 760px; margin-bottom: 0; line-height: 1.55; }
+    .install-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 3px solid var(--ink); }
+    details { border-right: 3px solid var(--ink); border-bottom: 3px solid var(--ink); }
+    details:last-child { border-right: 0; }
+    summary { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 20px; cursor: pointer; list-style: none; text-transform: uppercase; }
     summary::-webkit-details-marker { display: none; }
-    summary::after { content: "+"; color: var(--orange); font-size: 1.4rem; font-weight: 700; }
-    details[open] summary::after { content: "−"; }
-    summary h2 { font-size: 1.15rem; text-transform: uppercase; }
-    .detail-body { padding: 0 18px 18px; border-top: 1px solid var(--line); color: var(--orange-soft); font-size: .75rem; line-height: 1.6; }
-    .detail-body ol { margin: 16px 0 0; padding-left: 20px; }
-    .detail-body li + li { margin-top: 8px; }
-    .detail-body code { color: var(--cream); overflow-wrap: anywhere; }
-    .checksum { display: block; margin-top: 6px; color: var(--cream); font-size: .68rem; overflow-wrap: anywhere; }
-    .detail-note { margin: 14px 0 0; padding: 10px 12px; color: var(--cream); border-left: 3px solid var(--orange); background: var(--black); }
-
-    footer { padding: 22px 0 30px; }
-    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; color: var(--orange-soft); font-size: .68rem; line-height: 1.5; }
-    .footer-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 14px; }
+    summary::after { content: "+"; font-size: 1.7rem; font-weight: 900; }
+    details[open] summary::after { content: "-"; }
+    details[open] summary { color: var(--field); background: var(--ink); }
+    summary h3 { margin: 0; }
+    .detail-body { padding: 24px; border-top: 3px solid var(--ink); }
+    .detail-body ol { margin: 0; padding-left: 21px; line-height: 1.55; }
+    .detail-body li + li { margin-top: 10px; }
+    .checksum { display: block; margin-top: 6px; font: 700 .7rem/1.5 "Courier New", monospace; overflow-wrap: anywhere; }
+    .detail-note { margin: 20px 0 0; padding-left: 14px; border-left: 4px solid var(--ink); line-height: 1.5; }
+    footer { color: var(--field); background: var(--ink); }
+    .footer-row { min-height: 120px; display: flex; align-items: center; justify-content: space-between; gap: 28px; padding-block: 26px; font: 700 .68rem/1.55 "Courier New", monospace; text-transform: uppercase; }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 18px; }
     .footer-links a { text-decoration: none; }
-    .footer-links a:hover { color: var(--cream); }
-
-    @media (max-width: 820px) {
-      .command-card { min-height: auto; }
-      .hero-bottom { grid-template-columns: 1fr; }
-      .actions { display: flex; flex-wrap: wrap; min-width: 0; }
-      .actions .button { flex: 1 1 180px; }
-      .update-heading { align-items: flex-start; flex-direction: column; }
-      .update-heading p { text-align: left; }
-      .update-list { grid-template-columns: 1fr; }
-      .feature-strip { grid-template-columns: repeat(2, 1fr); }
-      .feature { border-bottom: 1px solid var(--line); }
-      .feature:nth-child(2n) { border-right: 0; }
-      .feature:last-child { grid-column: 1 / -1; border-bottom: 0; }
+    .footer-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+    @media (max-width: 860px) {
+      .hero-grid, .section-heading, .release-grid { grid-template-columns: 1fr; }
+      .monogram { min-height: 250px; }
+      .action-row { grid-template-columns: 1fr; }
+      .actions { justify-content: flex-start; }
+      .capability-grid { grid-template-columns: 1fr 1fr; }
+      .release-mark { border-right: 0; border-bottom: 3px solid var(--ink); }
     }
-
-    @media (max-width: 660px) {
+    @media (max-width: 640px) {
+      .shell { width: min(calc(100% - 24px), var(--max)); }
+      .nav { align-items: flex-start; flex-direction: column; padding: 16px 0; }
+      .nav-links { width: 100%; justify-content: space-between; gap: 12px; }
       .nav-links a:not(.download-link) { display: none; }
-      main { padding-top: 16px; }
-      .command-card { padding: 20px; box-shadow: 7px 7px 0 var(--black-2), 7px 7px 0 1px var(--orange); }
-      .ascii-wrap { min-height: 164px; margin: 18px 0; padding: 20px 12px; }
-      .ascii-title { font-size: clamp(5px, 1.72vw, 7px); }
-      .hero-copy h2 { font-size: clamp(2.5rem, 14vw, 4.3rem); }
-      .utility { grid-template-columns: 1fr; }
+      h1 { font-size: clamp(3.6rem, 21vw, 6rem); }
+      .capability-grid, .release-list, .install-grid { grid-template-columns: 1fr; }
+      .capability { min-height: 0; }
+      .release-item, .release-item:nth-child(2n) { border-right: 0; border-bottom: 2px solid var(--ink); }
+      .release-item:last-child { border-bottom: 0; }
+      details { border-right: 0; }
+      .trust-note { grid-template-columns: 1fr; }
       .footer-row { align-items: flex-start; flex-direction: column; }
       .footer-links { justify-content: flex-start; }
     }
-
-    @media (max-width: 390px) {
-      .shell { width: min(calc(100% - 20px), var(--max)); }
-      .terminal-line { align-items: flex-start; flex-direction: column; }
-      .ascii-title { font-size: 4.75px; }
-      .feature-strip { grid-template-columns: 1fr; }
-      .feature { border-right: 0; }
-      .feature:last-child { grid-column: auto; }
-    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
-
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-
   <header>
     <nav class="nav shell" aria-label="Main navigation">
-      <a class="brand" href="#top">GRAPHIC_<span>RUNNER</span></a>
+      <a class="brand" href="#top"><span class="brand-mark">GR</span><span class="brand-name">Graphic Runner</span></a>
       <div class="nav-links">
-        <a href="#install">Install notes</a>
-        <a href="https://runnerlabs.github.io/task-runner/">TaskRunner</a>
-        <a href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Feedback</a>
-        <a class="download-link" href="https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.23">Downloads</a>
+        <a href="#release">What's new</a><a href="#install">Install</a><a href="https://runnerlabs.github.io/task-runner/">Task Runner</a><a href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Feedback</a><a class="download-link" href="https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.23">Download</a>
       </div>
     </nav>
   </header>
-
-  <main class="shell" id="main">
-    <section class="command-card" id="top" aria-labelledby="main-title">
-      <div class="terminal-line">
-        <span>$ graphic-runner --start</span>
-        <span class="status">WINDOWS v0.0.23 BETA / LINUX v0.0.23 BETA</span>
+  <main id="main">
+    <section class="hero shell" id="top" aria-labelledby="main-title">
+      <div class="hero-grid">
+        <div><p class="kicker">Graphic Runner / Public beta</p><h1 id="main-title">Edit fast.<br>Easy.<br>Offline.</h1><p class="lede">Graphic Runner is an offline editor for fast, independent making. Take the work from first move to finished piece or bring it into a wider workflow.</p></div>
+        <div class="monogram" aria-label="Graphic Runner GR monogram"><span>GR</span></div>
       </div>
-
-      <div class="ascii-wrap">
-        <h1 class="visually-hidden" id="main-title">Graphic Runner</h1>
-        <pre class="ascii-title" aria-hidden="true">   ______                 __    _         ____
-  / ____/________ _____  / /_  (_)____   / __ \__  ______  ____  ___  _____
- / / __/ ___/ __  / __ \/ __ \/ / ___/  / /_/ / / / / __ \/ __ \/ _ \/ ___/
-/ /_/ / /  / /_/ / /_/ / / / / / /__   / _  _/ /_/ / / / / / / /  __/ /
-\____/_/   \__ _/ .___/_/ /_/_/\___/  /_/ |_|\__ _/_/ /_/_/ /_/\___/_/
-               /_/</pre>
-      </div>
-
-      <div class="hero-bottom">
-        <div class="hero-copy">
-          <h2>EDIT FAST, EASY, AND OFFLINE.</h2>
-          <p>Designed for anyone who wants to explore their creative side without a pay wall and without an internet connection.</p>
-        </div>
-        <div class="actions" aria-label="Download and feedback actions">
-          <a class="button primary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.23/GraphicRunner-0.0.23-Windows-Setup.exe">Windows Setup v0.0.23</a>
-          <a class="button secondary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.23/graphicrunner_0.0.23-1_amd64.deb">Linux v0.0.23-1</a>
-          <a class="button secondary" href="https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.23">All release files</a>
-          <a class="button secondary" href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Send feedback</a>
-        </div>
+      <div class="proof-row stamp" aria-label="Graphic Runner proof stamps"><span>Fast</span><span>Local</span><span>Open</span><span>Local.</span><span>Offline.</span><span>Yours.</span></div>
+    </section>
+    <section class="action-band" aria-label="Download Graphic Runner">
+      <div class="action-row shell"><p>Make graphics offline. Fast, local, yours.</p><div class="actions"><a class="button primary" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.23/GraphicRunner-0.0.23-Windows-Setup.exe">Windows v0.0.23</a><a class="button" href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.23/graphicrunner_0.0.23-1_amd64.deb">Linux v0.0.23-1</a></div></div>
+    </section>
+    <section class="section shell" aria-labelledby="control-title">
+      <div class="section-heading"><h2 id="control-title">Show control. Let the work speak.</h2><p>Build, edit, and export without sending your work to a server. Use Graphic Runner alone or beside the tools already in your workflow.</p></div>
+      <div class="capability-grid">
+        <article class="capability"><span class="stamp">01 / Make</span><h3>Text, image, vector</h3><p>Shape type, draw vectors, work with layers and masks, and arrange several artboards.</p></article>
+        <article class="capability"><span class="stamp">02 / Move</span><h3>Motion + effects</h3><p>Animate layers, mix effects, preview the result, and export GIF work from one local editor.</p></article>
+        <article class="capability"><span class="stamp">03 / Refine</span><h3>Selection + trace</h3><p>Clean selections, trace artwork, edit nodes, and keep precise control over the result.</p></article>
+        <article class="capability"><span class="stamp">04 / Arrange</span><h3>Layers + artboards</h3><p>Group, mask, reorder, and organize separate designs in one working file.</p></article>
+        <article class="capability"><span class="stamp">05 / Process</span><h3>Local AI</h3><p>Select, inpaint, upscale, and polish sketches on your machine. Your artwork stays local.</p></article>
+        <article class="capability"><span class="stamp">06 / Finish</span><h3>Export control</h3><p>Prepare raster, vector, print, and animated output with settings you can inspect and adjust.</p></article>
       </div>
     </section>
-
-    <section class="feature-strip" aria-label="Graphic Runner features">
-      <div class="feature"><strong>Effects + dither</strong><span>Style artwork, tune dithering, and finish designs offline</span></div>
-      <div class="feature"><strong>Layers + masks</strong><span>Blend, select, paint, mask, align, flip, rotate, and use artboards</span></div>
-      <div class="feature"><strong>Express + Advanced</strong><span>Start with a simpler workspace or open the full toolset without changing your artwork</span></div>
-      <div class="feature"><strong>Local AI + trace</strong><span>Auto-polish sketches, trace clean PNG art, select, inpaint, and upscale offline</span></div>
-      <div class="feature"><strong>Exact-size export</strong><span>Choose dimensions, review the preview and file size, then open the saved file’s folder</span></div>
+    <section class="section shell" id="release" aria-labelledby="release-title">
+      <div class="section-heading"><h2 id="release-title">Photo Runner + Contour Flow.</h2><p>v0.0.23 adds deeper color control, flowing lines, a clear Main Glow, and smoother masking.</p></div>
+      <div class="release-grid"><div class="release-mark"><span class="stamp">Current release</span><strong>0.0.23</strong><p class="stamp">Windows + Linux / Beta</p></div><div class="release-list"><article class="release-item"><strong>Photo Runner</strong><p>Adjust exposure, contrast, color balance, selective HSL, grain, and vignette.</p></article><article class="release-item"><strong>Contour Flow</strong><p>Bend Signal Track around light and shade, then mix it with dither and color.</p></article><article class="release-item"><strong>Main Glow</strong><p>Control the halo, threshold, tint, and hot core from one visible section.</p></article><article class="release-item"><strong>Faster masking</strong><p>Reuse cached effects and coalesce previews for smoother brush work.</p></article></div></div>
+      <div class="trust-note"><strong>Your machine. Your mess. Your file.</strong><p>Graphic Runner does not collect personal data, upload artwork, monitor activity, build profiles, train on user content, or use a remote AI service. AI-enhanced editing runs locally.</p></div>
     </section>
-
-    <section class="update-preview" id="updates" aria-labelledby="update-title">
-      <div class="update-heading">
-        <h2 id="update-title">v0.0.23 Photo Runner + Contour Flow</h2>
-        <p>Shape flowing lines, grade the finished design, and mask with fewer preview interruptions. This beta brings Photo Runner, stronger color controls, and one easy-to-find Main Glow.</p>
+    <section class="section shell" id="install" aria-labelledby="install-title">
+      <div class="section-heading"><h2 id="install-title">Open it. Make something.</h2><p>Choose the native package for your machine. Each package includes Java and the local models used by Graphic Runner.</p></div>
+      <div class="install-grid">
+        <details><summary><h3>Windows 10/11</h3><span class="stamp">Setup</span></summary><div class="detail-body"><ol><li>Download <a href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.23/GraphicRunner-0.0.23-Windows-Setup.exe"><strong>GraphicRunner-0.0.23-Windows-Setup.exe</strong></a>.</li><li>Verify the SHA-256 checksum.<span class="checksum">79E39475E0C8FB78A49BEAB6A52B58510111F512CE08117F7CCEC7CEAD509DE9</span></li><li>Run Setup, then accept the beta license when Graphic Runner opens.</li></ol><p class="detail-note">This unsigned beta may show a publisher notice. Verify the checksum, confirm the app name, and continue from More info. Do not disable Windows security.</p></div></details>
+        <details><summary><h3>Linux x64</h3><span class="stamp">Native</span></summary><div class="detail-body"><ol><li>Download <a href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.23/graphicrunner_0.0.23-1_amd64.deb"><strong>graphicrunner_0.0.23-1_amd64.deb</strong></a>.</li><li>Verify the SHA-256 checksum.<span class="checksum">AD901C06F4816F4A5AD97CCD33A5E4DD7DA90E92955A73CE689907664F190356</span></li><li>Install with <code>sudo apt install ./graphicrunner_0.0.23-1_amd64.deb</code>.</li><li>For a no-install option, use the <a href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.23/GraphicRunner-Linux-x64-0.0.23.tar.gz"><strong>portable Linux bundle</strong></a>.</li></ol><p class="detail-note">Java is included. Vulkan and OpenMP are optional for native AI upscale. Wine and Bottles are not required.</p></div></details>
       </div>
-      <ul class="update-list">
-        <li><strong>Photo Runner</strong>Independent photographic adjustments, fine grain, color balance, and a selective HSL mixer.</li>
-        <li><strong>Contour Flow</strong>Relief-driven lines stack with dithering and Photo Runner. Blend palettes, preserve source colors, or reveal layers through transparent gaps.</li>
-        <li><strong>Main Glow + Blur</strong>One searchable bloom control in Post. Blur before patterns or soften the finished layer, with Preserve Alpha for solid edges.</li>
-        <li><strong>Smoother masking</strong>Cached effects and coalesced brush previews reduce repeated work. MASK / SELECT MASK now has a larger, full-width click target.</li>
-        <li><strong>Canvas + DTF</strong>Lock crop handles without resetting the canvas, fit a single image from the panel, and access DTF preparation more easily.</li>
-        <li><strong>Native installers</strong>Bundled Java and offline AI models for Windows and Linux. Linux declares desktop, Vulkan-loader, and OpenMP dependencies.</li>
-      </ul>
-    </section>
-
-    <section class="privacy-note" aria-labelledby="privacy-title">
-      <h2 id="privacy-title">AI-enhanced features and privacy</h2>
-      <p>Installing, launching, or using Graphic Runner—including its AI-enhanced features—acknowledges the included license terms. AI-enhanced tools perform only their described editing functions. Graphic Runner does not collect personal data, upload artwork, monitor activity, build profiles, train on user content, or use a remote AI service. Processing stays on the user's device.</p>
-    </section>
-
-    <section class="utility" id="install" aria-label="Installation notes">
-      <details>
-        <summary><h2>Windows 10/11</h2><span>v0.0.23 installer</span></summary>
-        <div class="detail-body">
-          <ol>
-            <li>Download <a href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.23/GraphicRunner-0.0.23-Windows-Setup.exe"><code>GraphicRunner-0.0.23-Windows-Setup.exe</code></a>.</li>
-            <li>Verify its SHA-256 checksum:<span class="checksum">79E39475E0C8FB78A49BEAB6A52B58510111F512CE08117F7CCEC7CEAD509DE9</span></li>
-            <li>Run the verified installer. It includes Java, adds Graphic Runner to the Start menu, and registers a normal Windows uninstaller.</li>
-            <li>This unsigned beta may display <strong>Windows protected your PC</strong>. After verifying the checksum, select <strong>More info</strong>, confirm the app name, then select <strong>Run anyway</strong>.</li>
-            <li>Accept the beta license when Graphic Runner opens.</li>
-          </ol>
-          <p class="detail-note">Do not disable Defender or SmartScreen. Trusted code signing is the permanent fix for the warning.</p>
-        </div>
-      </details>
-
-      <details id="linux-install">
-        <summary><h2>Linux x64</h2><span>v0.0.23-1 native installer</span></summary>
-        <div class="detail-body">
-          <ol>
-            <li>Download <a href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.23/graphicrunner_0.0.23-1_amd64.deb"><code>graphicrunner_0.0.23-1_amd64.deb</code></a> and verify its checksum:<span class="checksum">AD901C06F4816F4A5AD97CCD33A5E4DD7DA90E92955A73CE689907664F190356</span></li>
-            <li>Install it with <code>sudo apt install ./graphicrunner_0.0.23-1_amd64.deb</code>.</li>
-            <li>Launch <strong>GraphicRunner</strong> from your desktop application menu.</li>
-            <li>For a no-install option, download the portable <a href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.23/GraphicRunner-Linux-x64-0.0.23.tar.gz"><code>GraphicRunner-Linux-x64-0.0.23.tar.gz</code></a> bundle.</li>
-          </ol>
-          <p class="detail-note"><strong>Ubuntu 22.04 or newer:</strong> Java is included. The DEB declares desktop dependencies, including font and GTK libraries with modern package-name alternatives. Both the DEB and portable bundle passed tests on Ubuntu 22.04 and 26.04; portable users need the same desktop libraries. The DEB also installs Vulkan-loader and OpenMP libraries; native AI upscaling additionally needs a compatible Vulkan device and driver. Wine and Bottles are not required.</p>
-        </div>
-      </details>
     </section>
   </main>
-
-  <footer>
-    <div class="footer-row shell">
-      <span>© 2026 Patrick Jamison / Graphic Runner proprietary freeware / source private</span>
-      <div class="footer-links">
-        <a href="https://runnerlabs.github.io/task-runner/">TaskRunner</a>
-        <a href="https://buymeacoffee.com/trunner">Buy me a coffee</a>
-        <a href="https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.23">Release files</a>
-        <a href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.23/SHA256SUMS_v0.0.23.txt">SHA-256 checksums</a>
-        <a href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Beta feedback</a>
-        <a href="mailto:taskmaster@trunner.net">Contact</a>
-      </div>
-    </div>
-  </footer>
+  <footer><div class="footer-row shell"><span>Graphic Runner / Fast - Local - Open<br>© 2026 Patrick Jamison / Proprietary freeware</span><div class="footer-links"><a href="https://runnerlabs.github.io/task-runner/">Task Runner</a><a href="https://buymeacoffee.com/trunner">Buy me a coffee</a><a href="https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.23">Release files</a><a href="https://github.com/RunnerLabs/graphic-runner/releases/download/v0.0.23/SHA256SUMS_v0.0.23.txt">Checksums</a><a href="https://forms.gle/xRCnM3ARTG7ps8CYA" target="_blank" rel="noopener">Feedback</a><a href="mailto:taskmaster@trunner.net">Contact</a></div></div></footer>
 </body>
 </html>
