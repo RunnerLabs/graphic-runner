@@ -53,7 +53,7 @@
     .status { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
     .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ink); }
     .hero-body { display: grid; grid-template-columns: minmax(110px, 160px) 1fr; gap: 20px 28px; padding: 22px 18px 24px; }
-    .hero-mark { width: 132px; aspect-ratio: 1; display: grid; place-items: center; border: 2px solid var(--ink); font-size: 42px; font-weight: 900; letter-spacing: -.06em; }
+    .hero-mark { width: 132px; aspect-ratio: 1; display: grid; place-items: center; padding: 10px; border: 2px solid var(--ink); font: 800 12px/1.2 var(--mono); letter-spacing: .08em; text-align: center; text-transform: uppercase; }
     .hero-copy h1 { max-width: 16ch; margin-bottom: 12px; font-size: clamp(1.7rem, 3.6vw, 2.6rem); line-height: 1.05; }
     .lede { max-width: 48ch; margin-bottom: 18px; font-size: 15px; }
     .hero-ctas { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -97,7 +97,7 @@
     <section class="hero-card" aria-label="Hero">
       <div class="hero-bar"><code>graphicrunner --offline</code><span class="status"><span class="dot" aria-hidden="true"></span>Windows + Linux beta</span></div>
       <div class="hero-body">
-        <div class="hero-mark" aria-label="Graphic Runner">GR</div>
+        <div class="hero-mark" aria-label="Graphic Runner">Graphic Runner</div>
         <div class="hero-copy">
           <h1>Edit fast.<br>Easy.<br>Offline.</h1>
           <p class="lede">Graphic Runner is an offline editor for fast, independent making. Take the work from first move to finished piece or bring it into a wider workflow.</p>
