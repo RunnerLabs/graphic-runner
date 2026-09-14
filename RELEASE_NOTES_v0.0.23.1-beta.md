@@ -2,8 +2,6 @@
 
 Artboard and masking reliability hotfix for Windows.
 
-[Download the public update poster](assets/GraphicRunner-v0.0.23.1-Windows-Hotfix.png).
-
 ## Artboards and layers
 
 - Layers, solid planes, images, vectors, and text are created on the active artboard.

@@ -27,8 +27,6 @@ Users do not need to install Java separately.
 
 [Full v0.0.23.1 release notes](RELEASE_NOTES_v0.0.23.1-beta.md)
 
-[View the v0.0.23.1 update poster](assets/GraphicRunner-v0.0.23.1-Windows-Hotfix.png)
-
 ## Also included from v0.0.23
 
 - Photo Runner adjustments, fine grain, luminance-preserving color balance, and selective HSL.
