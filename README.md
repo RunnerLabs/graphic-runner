@@ -4,20 +4,32 @@ Graphic Runner is a free offline desktop graphics studio for text, images,
 logo-vector artwork, symbols, sketching, merchandise, and print effects. The
 public beta is proprietary freeware, not open-source software.
 
-## Download v0.0.23 Beta
+## Download v0.0.23.1 Beta
 
-Download the Photo Runner, Contour Flow & Masking update from the
-[official v0.0.23 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.23).
+Download the Artboard + Mask hotfix from the
+[official v0.0.23.1 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.23.1).
 
-- `GraphicRunner-0.0.23-Windows-Setup.exe` — recommended Windows 10/11 installer.
+- `GraphicRunner-0.0.23.1-Windows-Setup.exe` — recommended Windows 10/11 installer.
 - `graphicrunner_0.0.23-1_amd64.deb` — native Ubuntu 22.04+ x64 installer with declared desktop dependencies.
 - `GraphicRunner-Linux-x64-0.0.23.tar.gz` — portable native Linux x64 bundle.
-- `SHA256SUMS_v0.0.23.txt` — checksums for every download.
+- `SHA256SUMS_v0.0.23.1.txt` — checksum for the Windows hotfix.
 
 Every package includes Graphic Runner's Java runtime and offline AI models.
 Users do not need to install Java separately.
 
-## New in v0.0.23
+## New in v0.0.23.1
+
+- Layers, planes, images, vectors, and text stay with the active artboard.
+- Equal artboard dimensions now display at equal sizes, with local crop and position retained.
+- The new-artboard dialog creates 1-20 preset or custom artboards in one action.
+- Selection outlines can be hidden while live Feather, Edge, and Smooth controls refine the mask.
+- Mask rows identify their source and can return directly to it; orphaned mask references recover safely.
+
+[Full v0.0.23.1 release notes](RELEASE_NOTES_v0.0.23.1-beta.md)
+
+[View the v0.0.23.1 update poster](assets/GraphicRunner-v0.0.23.1-Windows-Hotfix.png)
+
+## Also included from v0.0.23
 
 - Photo Runner adjustments, fine grain, luminance-preserving color balance, and selective HSL.
 - Contour Flow and Signal Track variants that stack with dithering and Photo Runner.
@@ -64,8 +76,8 @@ Users do not need to install Java separately.
 
 ## Windows installation
 
-1. Download `GraphicRunner-0.0.23-Windows-Setup.exe`.
-2. Verify its SHA-256 checksum against `SHA256SUMS_v0.0.23.txt`.
+1. Download `GraphicRunner-0.0.23.1-Windows-Setup.exe`.
+2. Verify its SHA-256 checksum against `SHA256SUMS_v0.0.23.1.txt`.
 3. Run Setup, then accept the beta license when Graphic Runner opens.
 4. This beta is not digitally signed yet, so Windows may show **Windows
    protected your PC**. After verifying the checksum, select **More info**,
@@ -96,12 +108,12 @@ Native AI upscaling additionally needs `libvulkan1`, `libgomp1`, and a compatibl
 ## Verify your download
 
 ```text
-68A175CC963050E6921B9A655F7764D0A20B0F43DB71A5F6955D7D8D60880A8F  GraphicRunner-0.0.23-Windows-Setup.exe
-465BDCE1F1F83679F0965657B1324560033027FD85D39582F32B47C3FD7D4DC2  graphicrunner_0.0.23-1_amd64.deb
-C5D820966DF50F046213964EE08B7A278BB19A85444469CC4EFD3E4DA05245A7  GraphicRunner-Linux-x64-0.0.23.tar.gz
+47B54F21346A7C24CF3933C4284CFC3D62E9864FD04D99E262E8A5A86F86E435  GraphicRunner-0.0.23.1-Windows-Setup.exe
+AD901C06F4816F4A5AD97CCD33A5E4DD7DA90E92955A73CE689907664F190356  graphicrunner_0.0.23-1_amd64.deb
+237318042B8D6E082B868619386D8C692D7A1649BB94958E6AD401AB0F12878A  GraphicRunner-Linux-x64-0.0.23.tar.gz
 ```
 
-Windows: `Get-FileHash .\GraphicRunner-0.0.23-Windows-Setup.exe -Algorithm SHA256`
+Windows: `Get-FileHash .\GraphicRunner-0.0.23.1-Windows-Setup.exe -Algorithm SHA256`
 
 Linux: `sha256sum graphicrunner_0.0.23-1_amd64.deb`
 
