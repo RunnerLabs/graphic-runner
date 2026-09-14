@@ -4,20 +4,27 @@ Graphic Runner is a free offline desktop graphics studio for text, images,
 logo-vector artwork, symbols, sketching, merchandise, and print effects. The
 public beta is proprietary freeware, not open-source software.
 
-## Download v0.0.23.1 Beta
+## Download v0.0.23.2 Beta
 
-Download the Artboard + Mask hotfix from the
-[official v0.0.23.1 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.23.1).
+Download the Artboard Paint hotfix from the
+[official v0.0.23.2 release](https://github.com/RunnerLabs/graphic-runner/releases/tag/v0.0.23.2).
 
-- `GraphicRunner-0.0.23.1-Windows-Setup.exe` — recommended Windows 10/11 installer.
+- `GraphicRunner-0.0.23.2-Windows-Setup.exe` — recommended Windows 10/11 installer.
 - `graphicrunner_0.0.23-1_amd64.deb` — native Ubuntu 22.04+ x64 installer with declared desktop dependencies.
 - `GraphicRunner-Linux-x64-0.0.23.tar.gz` — portable native Linux x64 bundle.
-- `SHA256SUMS_v0.0.23.1.txt` — checksum for the Windows hotfix.
+- `SHA256SUMS_v0.0.23.2.txt` — checksum for the Windows hotfix.
 
 Every package includes Graphic Runner's Java runtime and offline AI models.
 Users do not need to install Java separately.
 
-## New in v0.0.23.1
+## New in v0.0.23.2
+
+- Painting works immediately on every active artboard, including blank newly created boards.
+- Brush coordinates map directly to the selected artboard before its first preview render.
+- Switching artboards keeps the active paint tool and current tab available.
+- The Layers panel refreshes from the selected artboard's independent document.
+
+## Also included from v0.0.23.1
 
 - Layers, planes, images, vectors, and text stay with the active artboard.
 - Equal artboard dimensions now display at equal sizes, with local crop and position retained.
@@ -74,8 +81,8 @@ Users do not need to install Java separately.
 
 ## Windows installation
 
-1. Download `GraphicRunner-0.0.23.1-Windows-Setup.exe`.
-2. Verify its SHA-256 checksum against `SHA256SUMS_v0.0.23.1.txt`.
+1. Download `GraphicRunner-0.0.23.2-Windows-Setup.exe`.
+2. Verify its SHA-256 checksum against `SHA256SUMS_v0.0.23.2.txt`.
 3. Run Setup, then accept the beta license when Graphic Runner opens.
 4. This beta is not digitally signed yet, so Windows may show **Windows
    protected your PC**. After verifying the checksum, select **More info**,
